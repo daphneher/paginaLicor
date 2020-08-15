@@ -1,8 +1,8 @@
 <?php 
     include_once "app/config.inc.php";
-
     $titulo = "Vinos - Home";
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>        
@@ -34,18 +34,20 @@
     <body>
         <!-- Banner -->
         <div class="slideshow-container" id="banner">
+            <?php
+                include_once("app/conexion.php");
+                $query = "SELECT * FROM tabla_banner";
+                $resultado = $conexion->query($query);
+                while($row = $resultado->fetch_assoc()){
+            ?>
 
             <div class="mySlides fade">
-              <img class="img-responsive" src="<?php echo RUTA_IMG ?>banner-1.jpg" style="width:100%">
+              <img class="img-responsive" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>" style="width:100%">
             </div>
+            <?php
+                }
+            ?>
 
-            <div class="mySlides fade">
-              <img class="img-responsive" src="<?php echo RUTA_IMG ?>banner-2.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img class="img-responsive" src="<?php echo RUTA_IMG ?>banner-3.jpg" style="width:100%">
-            </div> 
             <i class="fa fa-angle-right fa-2x next" aria-hidden="true" onclick="plusSlides(1)"></i>
             <i class="fa fa-angle-left fa-2x prev" aria-hidden="true" onclick="plusSlides(-1)"></i>
         </div>
