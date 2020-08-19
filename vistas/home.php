@@ -1,49 +1,23 @@
-<?php 
-    include_once "app/config.inc.php";
-    $titulo = "Vinos - Home";
+<?php
+//error_reporting(0);   //descomentar cuando el proyecto se termine
+include_once "plantillas/documento-apertura.inc.php";
+$titulo = "Vinos - Home";
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-    <head>        
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta http-equiv='cache-control' content='no-cache'>
-        <meta http-equiv='expires' content='0'>
-        <meta http-equiv='pragma' content='no-cache'>
-        
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-
-        <?php  
-            if (!isset($titulo) || empty($titulo)){
-                $titulo = 'Soluciones y Tecnología Empresarial - SMART';
-            }
-            echo "<title>$titulo</title>";
-        ?> 
-        
-        <link rel="icon" type="image/png" href="">
-
-        <link href="<?php echo RUTA_CSS ?>bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo RUTA_CSS ?>estilos.css" rel="stylesheet">
-        <link href="<?php echo RUTA_CSS ?>font-awesome.min.css" rel="stylesheet">        
-    </head>
-
-    <body>
         <!-- Banner -->
         <div class="slideshow-container" id="banner">
-            <?php
-                include_once("app/conexion.php");
+            <?php                
                 $query = "SELECT * FROM tabla_banner";
                 $resultado = $conexion->query($query);
                 while($row = $resultado->fetch_assoc()){
             ?>
 
-            <div class="mySlides fade">
-              <img class="img-responsive" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>" style="width:100%">
-            </div>
+                    <div class="mySlides fade">
+                      <!-- Extraer img de db -->
+                      <img class="img-responsive" 
+                      src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>" 
+                      style="width:100%">
+                    </div>
             <?php
                 }
             ?>

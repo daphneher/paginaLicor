@@ -6,7 +6,10 @@ body {
   overflow-x: hidden !important;
  	background-color: white;        
 }
-
+body, html {
+  height: 100%;
+  margin: 0;
+}
 p {
   text-align: justify;
 }
@@ -246,4 +249,122 @@ div#smart a:hover, div#smart a:active {
   transition: max-height 0.2s ease-out;
   border:0;
   margin:0.2em
+}
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++ Iniciar Sesion ++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+.bg {
+  /* The image used */
+  background-image: url("../img/login.jpg");
+  
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add styles to the form container */
+#container-login {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #ebf1ff;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #d2cbcb;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #d2cbcb;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+#enviar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+#enviar:hover {
+  opacity: 1;
+}
+
+#err_login {
+  background-color: #ebf1ff;
+  width: 20em;
+  padding: 2em;
+  padding-top: 0.1em;
+  border-radius: 0.5em;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++ Navegador Admin +++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#navbar-admin {
+  color:white !important;
+}
+#navbar-admin:hover {
+  color:#717175 !important;
+}
+
+#desplegable-admin span {
+  background-color:white !important;
+}
+#desplegable-admin:hover{
+  background-color:#337ab7 !important;
+}
+#desplegable-admin:focus{
+  background-color:#000000;
+}
+
+#jumbotrom-admin {
+    background-color: white;
+    padding: 0.5em;
+    padding-bottom: 1em;
+    border-radius: 1em;
+}
+#separador-admin {
+  margin-top: 0.1em;
+  border-top: 0.1em solid #292828;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++ Mostrar Banner ++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#img-banner {
+  height: 12em;
+  margin: auto;
+  border-radius: 5px;
+}
+#col-img-banner {
+  background-color: #c2bcbc;
+  margin:1em;
+  padding:1em;
+  border-radius:1em;
+}
+#col-img-banner a {
+  font-size: 1.2em;
+  color:#2116e9;
+}
+#col-img-banner p {
+  font-size: 1.4em;
+  color:black;
 }

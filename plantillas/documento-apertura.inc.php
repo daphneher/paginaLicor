@@ -9,24 +9,20 @@
         <meta http-equiv='expires' content='0'>
         <meta http-equiv='pragma' content='no-cache'>
         
-        <meta name="description" content="Soluciones y Tecnología Empresarial - SMART, una empresa que ofrece servicios informáticos y de otro índole">
-        <meta name="keywords" content="solutec-it, solutec it, solutec-it.com, diseño de páginas web, servicios Smart, servicios IT, otros servicios">
-        
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
         <?php  
             if (!isset($titulo) || empty($titulo)){
-                $titulo = 'Soluciones y Tecnología Empresarial - SMART';
+                $titulo = 'Vinos';
             }
             echo "<title>$titulo</title>";
-        ?>      
+        ?> 
         
-        <link rel="icon" type="image/png" href="<?php echo RUTA_IMG ?>owl2_icon.png">
+        <link rel="icon" type="image/png" href="">
+
         <link href="<?php echo RUTA_CSS ?>bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo RUTA_CSS ?>estilos.css" rel="stylesheet">
-        <link href="<?php echo RUTA_CSS ?>font-awesome.min.css" rel="stylesheet">
-        
+        <link href="<?php echo RUTA_CSS ?>font-awesome.min.css" rel="stylesheet">        
     </head>
     <body>
-    	<!-- BOTON UP -->
-        <button onclick="topFunction()" id="myBtn" title="Subir">
-            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
-        </button>
