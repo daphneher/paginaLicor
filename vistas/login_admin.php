@@ -10,7 +10,7 @@ if (!isset($_POST['login'])) {
 <div class="bg">
 	<div class="caption">
 		<form action="<?php echo LOGIN_ADMIN; ?>" method="post" id="container-login" class="container">
-	    	<h1>Iniciar Sesión</h1>
+	    	<h1 class="text-center"><b>Iniciar Sesión<b></h1>
 
 		    <label><b>Usuario</b></label>
 		    <input type="text" placeholder="Introduzca usuario" name="usuario" required autofocus>

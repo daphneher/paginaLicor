@@ -274,7 +274,7 @@ div#smart a:hover, div#smart a:active {
   margin: 20px;
   max-width: 300px;
   padding: 16px;
-  background-color: #ebf1ff;
+  background-color: #717ca5d6;
 }
 
 /* Full-width input fields */
@@ -283,14 +283,13 @@ input[type=text], input[type=password] {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #d2cbcb;
+  background: #ced5e8;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #d2cbcb;
+  background-color: #acbeea;
   outline: none;
 }
-
 /* Set a style for the submit button */
 #enviar {
   background-color: #4CAF50;
@@ -355,14 +354,14 @@ input[type=text]:focus, input[type=password]:focus {
   border-radius: 5px;
 }
 #col-img-banner {
-  background-color: #c2bcbc;
+  background-color: #7f7f7f;
   margin:1em;
   padding:1em;
   border-radius:1em;
 }
 #col-img-banner a {
   font-size: 1.2em;
-  color:#2116e9;
+  color:#105590;
 }
 #col-img-banner p {
   font-size: 1.4em;
