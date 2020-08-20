@@ -45,23 +45,21 @@ $tabla = $_REQUEST['tabla'];
 			
 				<img id="img-banner" class="img-responsive img-thumbnail"
 				src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">	
-				<br>	
-
+				<br>
 				<?php
 				if ($tabla !== TABLA_BANNER) {
 				
 				?>
+				<br><br>
 				<p style="text-align: justify;">
-					<?php echo $row['descripcion']; ?>
+					Descripción: <?php echo $row['descripcion']; ?>
 				</p>
 				<br>
-				<p style="text-align: justify;">
-					<?php echo $row['precio']; ?>
-				</p>
+				<p style="text-align: justify;">Precio: <?php echo $row['precio']; ?></p>
 				<?php
 				}
 				?>
-				<br><br>
+				<br>
 				<a style="padding:1em;" href="<?php echo ADMIN_MODIFICAR."?id=".$row['id']."&tabla=".$tabla; ?>">
 					<i class="fa fa-refresh" aria-hidden="true"></i> Modificar
 				</a>

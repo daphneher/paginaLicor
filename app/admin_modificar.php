@@ -39,18 +39,21 @@ $admin_proceso_modificar = ADMIN_PROCESO_MODIFICAR."?id=".$row['id']."&tabla=".$
 
             <br><br>
             <h4 style="text-align:left;">Nombre:</h4> 
-            <input style="background-color: white;" type="text" REQUIRED name="nombre"value="<?php echo $row['nombre']; ?>">  
+            <input style="background-color: white;" maxlength="50" placeholder="Máximo 50 caracteres..." type="text" REQUIRED name="nombre"
+            value="<?php echo $row['nombre']; ?>">  
 
             <?php
             if ($tabla !== TABLA_BANNER) {
             ?> 
             <br><br>
-            <h4 style="text-align:left;">Descripción:</h4> 
-            <input style="background-color: white;" type="text" REQUIRED name="descripcion" value="<?php echo $row['descripcion']; ?>"> 
+            <h4 style="text-align:left;">Descripción:</h4>  
+            <p>
+                <textarea style="background-color: white;;max-width: min-content;" name="descripcion" rows="4" cols="88" maxlength="250" required><?php echo $row['descripcion']; ?></textarea>
+            </p>
 
-            <br><br>
+            <br>
             <h4 style="text-align:left;">Precio:</h4> 
-            <input style="background-color: white;" type="text" REQUIRED name="precio" value="<?php echo $row['precio']; ?>"> 
+            <input style="background-color: white;" type="text" placeholder="Máximo 20 caracteres..." maxlength="20" REQUIRED name="precio" value="<?php echo $row['precio']; ?>"> 
             <?php
             }
             ?>       
