@@ -1,0 +1,369 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
+ 	background-color: white;        
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+p {
+  text-align: justify;
+}
+
+div#smart a {
+  color: #f9af25;
+  font-size:0.9em;
+}
+
+div#smart a:hover, div#smart a:active {
+  font-size: 0.95em;
+  color:#f9af25;
+}
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++ Banner ++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#banner {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {display: none}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 10s;
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++ Botón Menú ++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#copita {
+  position: fixed;
+  top:0.1em;
+  background-color: #862434e0;
+  color:#f9af25;
+  padding-left:1.9em;
+  padding-right:1.9em;
+  padding-top:0.2em;
+  font-size:2em !important;
+  left: 0.1em;
+}
+
+#btnMenu {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 1.4em;
+  background-color: #862434e0;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top:0.2em;
+  color: #f9af25;
+  left: 0.1em;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(38, 6, 6, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++ Pie de Pagina +++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#piePagina {
+  background-color: #523601;
+  color: #d8cdcd;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++ Botón Wsp +++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+.fa-whatsapp {
+  background-color: #0ad561;
+  font-size: 3em !important;
+  color: white;
+  padding: 0.15em;
+  padding-right: 0.19em;
+  padding-left:0.2em;
+  border-radius:5em;
+  position:fixed;
+  top:89%;
+  right:2%;
+}
+
+.fa-whatsapp:hover, .fa-whatsapp:active {
+  font-size: 2.8em !important;
+  top:89%;
+  right:2%;
+  
+}
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++ Nuestros Vinos +++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#copas {
+  padding: 0.3em;
+  background-color:#371b0fe0;
+}
+#copas:hover {
+  background-color:#371b0fc7;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #eeeeee;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border:0;
+  margin:0.2em
+}
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++ Iniciar Sesion ++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+.bg {
+  /* The image used */
+  background-image: url("../img/login.jpg");
+  
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add styles to the form container */
+#container-login {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #717ca5d6;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #ced5e8;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #acbeea;
+  outline: none;
+}
+/* Set a style for the submit button */
+#enviar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+#enviar:hover {
+  opacity: 1;
+}
+
+#err_login {
+  background-color: #ebf1ff;
+  width: 20em;
+  padding: 2em;
+  padding-top: 0.1em;
+  border-radius: 0.5em;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++ Navegador Admin +++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#navbar-admin {
+  color:white !important;
+}
+#navbar-admin:hover {
+  color:#717175 !important;
+}
+
+#desplegable-admin span {
+  background-color:white !important;
+}
+#desplegable-admin:hover{
+  background-color:#337ab7 !important;
+}
+#desplegable-admin:focus{
+  background-color:#000000;
+}
+
+#jumbotrom-admin {
+    background-color: white;
+    padding: 0.5em;
+    padding-bottom: 1em;
+    border-radius: 1em;
+}
+#separador-admin {
+  margin-top: 0.1em;
+  border-top: 0.1em solid #292828;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++ Mostrar Banner ++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+#img-banner {
+  height: 12em;
+  margin: auto;
+  border-radius: 5px;
+}
+#col-img-banner {
+  background-color: #7f7f7f;
+  margin:1em;
+  padding:1em;
+  border-radius:1em;
+}
+#col-img-banner a {
+  font-size: 1.2em;
+  color:#105590;
+}
+#col-img-banner p {
+  font-size: 1.4em;
+  color:black;
+}
