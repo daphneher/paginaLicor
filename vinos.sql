@@ -14,7 +14,7 @@ CREATE TABLE tabla_vino_tinto (
 	nombre VARCHAR(50) NOT NULL UNIQUE,
 	imagen LONGBLOB NOT NULL UNIQUE,
 	descripcion VARCHAR(250) NOT NULL,
-	descripcion VARCHAR(20) NOT NULL
+	precio VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE tabla_vino_blanco (
@@ -22,7 +22,7 @@ CREATE TABLE tabla_vino_blanco (
 	nombre VARCHAR(50) NOT NULL UNIQUE,
 	imagen LONGBLOB NOT NULL UNIQUE,
 	descripcion VARCHAR(250) NOT NULL,
-	descripcion VARCHAR(20) NOT NULL
+	precio VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE tabla_vino_rosa (
@@ -30,5 +30,5 @@ CREATE TABLE tabla_vino_rosa (
 	nombre VARCHAR(50) NOT NULL UNIQUE,
 	imagen LONGBLOB NOT NULL UNIQUE,
 	descripcion VARCHAR(250) NOT NULL,
-	descripcion VARCHAR(20) NOT NULL
+	precio VARCHAR(20) NOT NULL
 );

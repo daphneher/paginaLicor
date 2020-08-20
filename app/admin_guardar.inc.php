@@ -2,8 +2,6 @@
 // Validador de Usuario
 error_reporting(0); //descomentar cuando el proyecto se termino
 
-include_once "config.inc.php";
-
 session_start();
 
 $varsesion = $_SESSION['usuario'];
@@ -13,7 +11,8 @@ if ($varsesion == null || $varsesion = '' || $varsesion !== NOMBRE_USER) {
     die();
 }
 
-include_once "conexion.php";
+include_once "app/config.inc.php";
+include_once "app/conexion.inc.php";
 
 $tabla = $_REQUEST['tabla'];
 
@@ -33,5 +32,6 @@ $resultado = $conexion->query($query);
 if ($resultado) {
 	header("Location:" . ADMIN_SUBIR . "?tabla=" . $tabla);
 } else {
-	echo "No se subio";
+	echo '<br>';
+	echo 'No se subio <h3 style="text-align: center">ERROR: No se subio</h3>';
 }
