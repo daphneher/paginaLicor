@@ -61,6 +61,7 @@ $row = $resultado->fetch_assoc();
             <input type="submit" name="Subir">
 
         </form>
+        <br>
     </center>
 </div>
 <br><br>

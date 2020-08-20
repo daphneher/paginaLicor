@@ -14,9 +14,7 @@ if ($varsesion == null || $varsesion = '' || $varsesion !== NOMBRE_USER) {
 }
 
 include_once "conexion.php";
-?>
 
-<?php
 $tabla = $_REQUEST['tabla'];
 $id = $_REQUEST['id'];
 

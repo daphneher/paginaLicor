@@ -38,7 +38,7 @@ if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 		}
 	} else if (count($partes_ruta) == 3 & $partes_ruta[1]==='un-buen-vino-al-alcance-de-un-click') {	
 		switch ($partes_ruta[2]) {
-			// manejo de base de datos
+			// Manejo de base de datos
 			case 'admin_subir':
 				$ruta_elegida = "app/admin_subir.php";
 				break;

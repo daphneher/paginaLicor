@@ -74,10 +74,11 @@ $tabla = $_REQUEST['tabla'];
 						}
 						?>
 						<input type="file" REQUIRED name="imagen">
-						<br>
+						<br><br>
 						<input type="submit" name="Subir">
 					</center>
 				</form>	
+				<br>
 			</div>
 			<br>	
 		</div>

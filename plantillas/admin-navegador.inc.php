@@ -6,14 +6,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a id="navbar-admin" class="navbar-brand" href="#">Administracion General</a>
+      <a id="navbar-admin" class="navbar-brand" href="#">
+        Administracion General
+      </a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">        
         <li>
           <a id="navbar-admin" href="<?php echo USER;?>">
-            <span class="glyphicon glyphicon-home" aria-hidden="true" ></span> Inicio
+            <i class="fa fa-bars" aria-hidden="true"></i> Inicio Administrador
+          </a>
+        </li>
+        <li>
+          <a id="navbar-admin" href="<?php echo USER;?>">
+            <span class="glyphicon glyphicon-home" aria-hidden="true" ></span> Ir a Página Principal
           </a>
         </li>
       </ul>
@@ -26,5 +33,4 @@
       </ul>
       </div>     
     </div>
-
 </nav>
