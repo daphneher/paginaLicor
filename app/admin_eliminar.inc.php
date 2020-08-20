@@ -17,14 +17,14 @@ include_once "conexion.php";
 ?>
 
 <?php
-
+$tabla = $_REQUEST['tabla'];
 $id = $_REQUEST['id'];
 
-$query = "DELETE FROM tabla_banner WHERE id='$id' ";
+$query = "DELETE FROM ".$tabla." WHERE id='$id' ";
 $resultado = $conexion->query($query);
 
 if ($resultado) {
-	header("Location:" . MOSTRAR_BANNER);
+	header("Location:" . ADMIN_MOSTRAR . "?tabla=" . $tabla);
 } else {
 	echo "ERROR: No se eliminó";
 }

@@ -31,7 +31,7 @@ if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 				$ruta_elegida = "vistas/cerrar_sesion.inc.php";
 				break;
 
-			// usuario de base datos	
+			// Usuario de base datos	
 			case 'un-buen-vino-al-alcance-de-un-click':
 				$ruta_elegida = "app/admin.php";
 				break;	
@@ -39,28 +39,28 @@ if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 	} else if (count($partes_ruta) == 3 & $partes_ruta[1]==='un-buen-vino-al-alcance-de-un-click') {	
 		switch ($partes_ruta[2]) {
 			// manejo de base de datos
-			case 'admin_banner':
-				$ruta_elegida = "app/admin_banner.php";
+			case 'admin_subir':
+				$ruta_elegida = "app/admin_subir.php";
 				break;
 
-			case 'eliminar_banner':
-				$ruta_elegida = "app/eliminar_banner.inc.php";
+			case 'admin_eliminar':
+				$ruta_elegida = "app/admin_eliminar.inc.php";
 				break;
 
-			case 'guardar_banner':
-			$ruta_elegida = "app/guardar_banner.inc.php";
+			case 'admin_guardar':
+			$ruta_elegida = "app/admin_guardar.inc.php";
 			break;
 
-			case 'modificar_banner':
-			$ruta_elegida = "app/modificar_banner.php";
+			case 'admin_modificar':
+			$ruta_elegida = "app/admin_modificar.php";
 			break;
 
-			case 'mostrar_banner':
-			$ruta_elegida = "app/mostrar_banner.php";
+			case 'admin_mostrar':
+			$ruta_elegida = "app/admin_mostrar.php";
 			break;
 
-			case 'proceso_modificar_banner':
-			$ruta_elegida = "app/proceso_modificar_banner.inc.php";
+			case 'admin_proceso_modificar':
+			$ruta_elegida = "app/admin_proceso_modificar.inc.php";
 			break;
 		}
 	} 

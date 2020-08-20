@@ -17,16 +17,26 @@ include_once "conexion.php";
 ?>
 
 <?php
+$tabla = $_REQUEST['tabla'];
 $id = $_REQUEST['id'];
 
 $nombre = $_POST['nombre'];
 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
-$query = "UPDATE tabla_banner SET nombre='$nombre', imagen='$imagen' WHERE id='$id' ";
+if ($tabla !== TABLA_BANNER) {
+	$descripcion = $_POST['descripcion'];
+	$precio = $_POST['precio'];
+
+	$query = "UPDATE " . $tabla . " SET nombre='$nombre', imagen='$imagen', descripcion='$descripcion', precio='$precio' WHERE id='$id' ";
+}
+else {
+	$query = "UPDATE " . $tabla . " SET nombre='$nombre', imagen='$imagen' WHERE id='$id' ";
+}
+
 $resultado = $conexion->query($query);
 
 if ($resultado) {
-	header("Location: mostrar_banner");
+	header("Location:". ADMIN_MOSTRAR . "?tabla=" . $tabla);
 } else {
 	echo "ERROR: No se modifico";
 }

@@ -18,9 +18,15 @@ define("NOMBRE_USER", "todovino");
 define("CLAVE_USER", "elvino");
 
 // Rutas DataBase
-define("ADMIN_BANNER", USER . "/admin_banner");
-define("ELIMINAR_BANNER", USER . "/eliminar_banner");
-define("GUARDAR_BANNER", USER . "/guardar_banner");
-define("MODIFICAR_BANNER", USER . "/modificar_banner");
-define("MOSTRAR_BANNER", USER . "/mostrar_banner");
-define("PROCESO_MODIFICAR_BANNER", USER . "/proceso_modificar_banner");
+define("ADMIN_SUBIR", USER . "/admin_subir");
+define("ADMIN_ELIMINAR", USER . "/admin_eliminar");
+define("ADMIN_GUARDAR", USER . "/admin_guardar");
+define("ADMIN_MODIFICAR", USER . "/admin_modificar");
+define("ADMIN_MOSTRAR", USER . "/admin_mostrar");
+define("ADMIN_PROCESO_MODIFICAR", USER . "/admin_proceso_modificar");
+
+// Tablas de DB
+define("TABLA_BANNER", "tabla_banner");
+define("TABLA_VINO_TINTO", "tabla_vino_tinto");
+define("TABLA_VINO_BLANCO", "tabla_vino_blanco");
+define("TABLA_VINO_ROSA", "tabla_vino_rosa");

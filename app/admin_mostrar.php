@@ -18,14 +18,16 @@ include_once "conexion.php";
 
 <?php
 
-$titulo = "Administrador Banner";
+$titulo = "Administrador - Mostrar";
 include_once("plantillas/documento-apertura.inc.php");
 include_once("plantillas/admin-navegador.inc.php");
+
+$tabla = $_REQUEST['tabla'];
 ?>
 <br>
 <div class="container">
 	<h2>
-		<a href="<?php echo ADMIN_BANNER; ?>">
+		<a href="<?php echo ADMIN_SUBIR."?tabla=".$tabla; ?>">
 			<i class="fa fa-plus" aria-hidden="true"></i> Agregar una nueva imagen
 		</a>
 	</h2>
@@ -33,7 +35,8 @@ include_once("plantillas/admin-navegador.inc.php");
 
 	<div class="row">
 	<?php 
-		$query = "SELECT * FROM tabla_banner";
+		$tabla = $_REQUEST['tabla'];
+		$query = "SELECT * FROM ". $tabla;
 		$resultado = $conexion->query($query);
 		while ($row = $resultado->fetch_assoc()) {
 	?>
@@ -44,14 +47,29 @@ include_once("plantillas/admin-navegador.inc.php");
 				</b></p>
 			
 				<img id="img-banner" class="img-responsive img-thumbnail"
-				src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">		
+				src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">	
+				<br>	
+
+				<?php
+				if ($tabla !== TABLA_BANNER) {
 				
+				?>
+				<p style="text-align: justify;">
+					<?php echo $row['descripcion']; ?>
+				</p>
+				<br>
+				<p style="text-align: justify;">
+					<?php echo $row['precio']; ?>
+				</p>
+				<?php
+				}
+				?>
 				<br><br>
-				<a style="padding:1em;" href="<?php echo MODIFICAR_BANNER."?id=".$row['id']; ?>">
+				<a style="padding:1em;" href="<?php echo ADMIN_MODIFICAR."?id=".$row['id']."&tabla=".$tabla; ?>">
 					<i class="fa fa-refresh" aria-hidden="true"></i> Modificar
 				</a>
 				<br><br>
-				<a style="padding:1em;" href="<?php echo ELIMINAR_BANNER."?id=".$row['id']; ?>">
+				<a style="padding:1em;" href="<?php echo ADMIN_ELIMINAR."?id=".$row['id']."&tabla=".$tabla; ?>">
 					<i class="fa fa-times" aria-hidden="true"></i> Eliminar
 				</a>						
 			</center>			

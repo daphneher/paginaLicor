@@ -14,19 +14,24 @@ if ($varsesion == null || $varsesion = '' || $varsesion !== NOMBRE_USER) {
 }
 
 include_once "conexion.php";
-?>
 
-<?php
-$id = $_REQUEST['id'];
+$tabla = $_REQUEST['tabla'];
 
 $nombre = $_POST['nombre'];
 $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
-$query = "UPDATE tabla_banner SET nombre='$nombre', imagen='$imagen' WHERE id='$id' ";
+if ($tabla !== TABLA_BANNER) {
+	$descripcion = $_POST['descripcion'];
+	$precio = $_POST['precio'];
+	$query = "INSERT INTO ".$tabla."(nombre,imagen,descripcion,precio) VALUES('$nombre','$imagen','$descripcion','$precio')";
+} else {
+	$query = "INSERT INTO ".$tabla."(nombre,imagen) VALUES('$nombre','$imagen')";
+}
+
 $resultado = $conexion->query($query);
 
 if ($resultado) {
-	header("Location: mostrar_banner");
+	header("Location:" . ADMIN_SUBIR . "?tabla=" . $tabla);
 } else {
-	echo "ERROR: No se modifico";
+	echo "No se subio";
 }

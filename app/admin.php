@@ -17,7 +17,7 @@ include_once "conexion.php";
 ?>
 
 <?php
-$titulo = "Administrador General - Vino";
+$titulo = "Administrador General";
 include_once("plantillas/documento-apertura.inc.php");
 include_once("plantillas/admin-navegador.inc.php");
 ?>
@@ -30,22 +30,53 @@ include_once("plantillas/admin-navegador.inc.php");
             <div id="jumbotrom-admin" class="jumbotrom">
                 <h3><b>Tabla Banner</b></h3>
                 <hr id="separador-admin">
-                <a href="<?php echo ADMIN_BANNER; ?>" type="button" class="btn btn-primary">Subir Nueva Imagen</a>
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_BANNER; ?>" >
+                    Subir Nueva Imagen
+                </a>
                 <br><br>
-                <a href="<?php echo MOSTRAR_BANNER; ?>" type="button" class="btn btn-primary">
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_BANNER; ?>">
                     Ver tabla
                 </a>
-            </div>
-            
+            </div>            
         </div>  
         <div class="col-md-3">
-            
+            <div id="jumbotrom-admin" class="jumbotrom">
+                <h3><b>Tabla Vino Tinto</b></h3>
+                <hr id="separador-admin">
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_VINO_TINTO; ?>" >
+                    Subir Nueva Imagen
+                </a>
+                <br><br>
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_VINO_TINTO; ?>">
+                    Ver tabla
+                </a>
+            </div>            
         </div> 
         <div class="col-md-3">
-            
+            <div id="jumbotrom-admin" class="jumbotrom">
+                <h3><b>Tabla Vino Blanco</b></h3>
+                <hr id="separador-admin">
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_VINO_BLANCO; ?>" >
+                    Subir Nueva Imagen
+                </a>
+                <br><br>
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_VINO_BLANCO; ?>">
+                    Ver tabla
+                </a>
+            </div>            
         </div> 
         <div class="col-md-3">
-            
+            <div id="jumbotrom-admin" class="jumbotrom">
+                <h3><b>Tabla Banner</b></h3>
+                <hr id="separador-admin">
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_VINO_ROSA; ?>" >
+                    Subir Nueva Imagen
+                </a>
+                <br><br>
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_VINO_ROSA; ?>">
+                    Ver tabla
+                </a>
+            </div>            
         </div>               
     </div>
     <br><br>
