@@ -1,11 +1,16 @@
 <?php
 
+define("GUEST", "invitado_vino");
+
 //define("SERVIDOR", "http://solutec-it.com");   // DOMINIO  
 define("SERVIDOR", "http://localhost/vinos");   // LOCALHOST
 
 // Rutas Vistas
 define("LOGIN_ADMIN", SERVIDOR . "/login_admin");
 define("CERRAR_SESION", SERVIDOR . "/cerrar_sesion");
+
+// Variedades
+define("VARIEDAD", SERVIDOR . "/variedad");
 
 // Rutas Recursos
 define("RUTA_CSS", SERVIDOR . "/css/");

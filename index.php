@@ -22,13 +22,19 @@ if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 	if (count($partes_ruta) == 1) {
 		$ruta_elegida = "vistas/home.php";	
 
-	} else if (count($partes_ruta) == 2) {
+	} else if (count($partes_ruta) == 2) {		
 		switch ($partes_ruta[1]) {
+			// Login y Logout
 			case 'login_admin':
 				$ruta_elegida = "vistas/login_admin.php";
 				break;
 			case 'cerrar_sesion':
 				$ruta_elegida = "vistas/cerrar_sesion.inc.php";
+				break;
+
+			// Variedades
+			case 'variedad':
+				$ruta_elegida = "variedades/variedad.php";
 				break;
 
 			// Usuario de base datos	

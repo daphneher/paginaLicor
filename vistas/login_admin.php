@@ -1,6 +1,8 @@
 <?php 
-error_reporting(0);	//descomentar cuando el proyecto se termine
+include_once "mostrar_errores.inc.php";
+
 $titulo = "Iniciar Sesión";
+
 include_once "plantillas/documento-apertura.inc.php";
 
 if (isset($_POST['login'])) {

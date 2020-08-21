@@ -1,6 +1,6 @@
 <?php
 // Validador de Usuario
-error_reporting(0); //descomentar cuando el proyecto se termino
+include_once "mostrar_errores.inc.php";
 
 session_start();
 
@@ -23,5 +23,9 @@ $resultado = $conexion->query($query);
 if ($resultado) {
 	header("Location:" . ADMIN_MOSTRAR . "?tabla=" . $tabla);
 } else {
-	echo "ERROR: No se eliminó";
+	include_once("plantillas/documento-apertura.inc.php");
+	include_once("plantillas/admin-navegador.inc.php");
+	echo '<br>';
+	echo '<h3 style="text-align: center">ERROR: No se eliminó</h3>';
+	include_once "plantillas/documento-cierre.inc.php";
 }

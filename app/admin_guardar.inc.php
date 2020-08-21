@@ -1,6 +1,6 @@
 <?php
 // Validador de Usuario
-error_reporting(0); //descomentar cuando el proyecto se termino
+include_once "mostrar_errores.inc.php";
 
 session_start();
 
@@ -30,8 +30,11 @@ if ($tabla !== TABLA_BANNER) {
 $resultado = $conexion->query($query);
 
 if ($resultado) {
-	header("Location:" . ADMIN_SUBIR . "?tabla=" . $tabla);
+	header("Location:" . ADMIN_MOSTRAR . "?tabla=" . $tabla);
 } else {
+	include_once("plantillas/documento-apertura.inc.php");
+	include_once("plantillas/admin-navegador.inc.php");
 	echo '<br>';
-	echo 'No se subio <h3 style="text-align: center">ERROR: No se subio</h3>';
+	echo '<h3 style="text-align: center">ERROR: No se subio</h3>';
+	include_once "plantillas/documento-cierre.inc.php";
 }

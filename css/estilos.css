@@ -95,28 +95,16 @@ div#smart a:hover, div#smart a:active {
 /*+++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++ Botón Menú ++++++++++++++*/
 /*+++++++++++++++++++++++++++++++++++++++*/
-#copita {
-  position: fixed;
-  top:0.1em;
-  background-color: #862434e0;
-  color:#f9af25;
-  padding-left:1.9em;
-  padding-right:1.9em;
-  padding-top:0.2em;
-  font-size:2em !important;
-  left: 0.1em;
-}
-
-#btnMenu {
+.btnMenu {
   font-size: 30px;
   cursor: pointer;
   position: fixed;
-  top: 1.4em;
-  background-color: #862434e0;
+  top: 0.1em;
+  background-color: #10101085;
   padding-left: 0.4em;
   padding-right: 0.4em;
   padding-top:0.2em;
-  color: #f9af25;
+  color: #f9af25e0;
   left: 0.1em;
 }
 
@@ -169,6 +157,13 @@ div#smart a:hover, div#smart a:active {
   right: 35px;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .btnMenu {
+    font-size: 20px;
+    top: 15%;
+  }
+}
 /*+++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++ Pie de Pagina +++++++++++++*/
 /*+++++++++++++++++++++++++++++++++++++++*/
@@ -199,6 +194,11 @@ div#smart a:hover, div#smart a:active {
   top:89%;
   right:2%;
   
+}
+@media screen and (max-height: 450px) {
+  .fa-whatsapp {
+    top:80%;    
+  }
 }
 
 /*+++++++++++++++++++++++++++++++++++++++*/
@@ -367,9 +367,31 @@ input[type=text]:focus, input[type=password]:focus {
   font-size: 1.4em;
   color:black;
 }
+
+/*++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++ Seccion para Marce ++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++*/
 #titulo {
   color:black;
 }
+
 #descripcion {
   background-image: url('../img/blanco.jpg');
+}
+
+#descripcion-texto p, #descripcion-texto h1 {
+  font-family:didot,serif,helvética;
+  
+}
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++ Fin de Seccion para Marce ++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++*/
+
+#variedad-img {
+  width:100%;
+  height:28em; 
+  margin:auto;
 }

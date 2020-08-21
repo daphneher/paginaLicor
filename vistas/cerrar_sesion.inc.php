@@ -1,4 +1,6 @@
 <?php
+include_once "mostrar_errores.inc.php";
+
 session_start();
 
 error_reporting(0); //descomentar cuando se termine el proyectos

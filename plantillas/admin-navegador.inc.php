@@ -19,7 +19,7 @@
           </a>
         </li>
         <li>
-          <a id="navbar-admin" href="<?php echo USER;?>">
+          <a id="navbar-admin" href="<?php echo SERVIDOR;?>">
             <span class="glyphicon glyphicon-home" aria-hidden="true" ></span> Ir a Página Principal
           </a>
         </li>

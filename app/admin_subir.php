@@ -1,6 +1,6 @@
 <?php
 // Validador de Usuario
-error_reporting(0); //descomentar cuando el proyecto se termino
+include_once "mostrar_errores.inc.php";
 
 session_start();
 
@@ -27,12 +27,7 @@ $tabla = $_REQUEST['tabla'];
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
-			<div>
-				<?php
-				include_once "plantillas/admin-subir-advertenias.inc.php";
-				?>
-			</div>		
-			<br>		
+		
 			<div style="background-color:#7f7f7f; padding:1em;">
 				<?php
 				include_once "plantillas/admin-subir-formulario.inc.php";

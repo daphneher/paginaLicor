@@ -1,6 +1,6 @@
 <?php
 // Validador de Usuario
-error_reporting(0); //descomentar cuando el proyecto se termino
+include_once "mostrar_errores.inc.php";
 
 session_start();
 

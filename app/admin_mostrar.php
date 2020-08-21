@@ -1,6 +1,6 @@
 <?php
 // Validador de Usuario
-error_reporting(0); //descomentar cuando el proyecto se termino
+include_once "mostrar_errores.inc.php";
 
 session_start();
 
@@ -39,9 +39,7 @@ $tabla = $_REQUEST['tabla'];
 	?>
 		<div class="col-md-4">
 			<center id="col-img-banner">
-				<p style="text-align: center;"><b>
-					Nombre: <?php echo $row['nombre']; ?>						
-				</b></p>
+				<p style="text-align: center;"><b>Nombre: <?php echo $row['nombre']; ?></b></p>
 			
 				<img id="img-banner" class="img-responsive img-thumbnail"
 				src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">	
@@ -50,12 +48,13 @@ $tabla = $_REQUEST['tabla'];
 				if ($tabla !== TABLA_BANNER) {
 				
 				?>
-				<br><br>
-				<p style="text-align: justify;">
-					Descripción: <?php echo $row['descripcion']; ?>
-				</p>
-				<br>
-				<p style="text-align: justify;">Precio: <?php echo $row['precio']; ?></p>
+					<br><br>
+					<p style="text-align: justify;">Descripción: 
+						<textarea style="background-color: white;;max-width: min-content;" name="descripcion" rows="4" cols="30" maxlength="250" required><?php echo $row['descripcion']; ?>
+						</textarea>		
+					</p>
+					<br>
+					<p style="text-align: justify;">Precio: <?php echo $row['precio']; ?></p>
 				<?php
 				}
 				?>
