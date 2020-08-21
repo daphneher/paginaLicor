@@ -367,3 +367,9 @@ input[type=text]:focus, input[type=password]:focus {
   font-size: 1.4em;
   color:black;
 }
+#titulo {
+  color:black;
+}
+#descripcion {
+  background-image: url('../img/blanco.jpg');
+}
