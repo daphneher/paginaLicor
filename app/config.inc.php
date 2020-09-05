@@ -1,7 +1,5 @@
 <?php
 
-define("GUEST", "invitado_vino");
-
 //define("SERVIDOR", "http://solutec-it.com");   // DOMINIO  
 define("SERVIDOR", "http://localhost/vinos");   // LOCALHOST
 

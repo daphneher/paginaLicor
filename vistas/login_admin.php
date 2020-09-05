@@ -11,7 +11,8 @@ if (isset($_POST['login'])) {
 		session_start();
 		$_SESSION['usuario'] = NOMBRE_USER;
 		
-	    header("Location:".USER);
+	    header("Location: ".USER);
+	    exit();
 	} else {	
 ?>
 		<div class="bg">

@@ -90,7 +90,18 @@ div#smart a:hover, div#smart a:active {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev, .next {font-size: 11px}
+}
+
+
+.imagenes_banner {
+  height: 25em;
+  width: 100%;
+}
+@media only screen and (max-width: 450px) {
+  .imagenes_banner {
+    height:15em;
+  }
 }
 /*+++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++ Botón Menú ++++++++++++++*/
@@ -104,7 +115,7 @@ div#smart a:hover, div#smart a:active {
   padding-left: 0.4em;
   padding-right: 0.4em;
   padding-top:0.2em;
-  color: #f9af25e0;
+  color: #efb810c7;
   left: 0.1em;
 }
 
@@ -115,8 +126,7 @@ div#smart a:hover, div#smart a:active {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(38, 6, 6, 0.9);
+  background-color: rgb(0 0 0 / 61%);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -133,13 +143,13 @@ div#smart a:hover, div#smart a:active {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: #efb810c7;
   display: block;
   transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: #9c9999;
 }
 
 .overlay .closebtn {
@@ -156,12 +166,16 @@ div#smart a:hover, div#smart a:active {
   top: 15px;
   right: 35px;
   }
+
+  .overlay-content {
+  top:10%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
   .btnMenu {
     font-size: 20px;
-    top: 15%;
+    top: 13%;
   }
 }
 /*+++++++++++++++++++++++++++++++++++++++*/
@@ -201,9 +215,9 @@ div#smart a:hover, div#smart a:active {
   }
 }
 
-/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/s
 /*++++++++++++ Nuestros Vinos +++++++++++*/
-/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #copas {
   padding: 0.3em;
   background-color:#371b0fe0;
@@ -251,9 +265,9 @@ div#smart a:hover, div#smart a:active {
   margin:0.2em
 }
 
-/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++ Iniciar Sesion ++++++++++++*/
-/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .bg {
   /* The image used */
   background-image: url("../img/login.jpg");
@@ -313,9 +327,9 @@ input[type=text]:focus, input[type=password]:focus {
   border-radius: 0.5em;
 }
 
-/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++ Navegador Admin +++++++++++*/
-/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #navbar-admin {
   color:white !important;
 }
@@ -345,9 +359,9 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 
-/*+++++++++++++++++++++++++++++++++++++++*/
-/*+++++++++++ Mostrar Banner ++++++++++++*/
-/*+++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++   Admin Mostrar   +++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #img-banner {
   height: 12em;
   margin: auto;
@@ -368,26 +382,35 @@ input[type=text]:focus, input[type=password]:focus {
   color:black;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++++ Seccion para Marce ++++++++++++++*/
-/*++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++   Variedad   +++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #titulo {
   color:black;
 }
 
-#descripcion {
+#descripcion-vino {
   background-image: url('../img/blanco.jpg');
+}
+
+#img-descripcion {
+  width:100%;
+  height:20em;
 }
 
 #descripcion-texto p, #descripcion-texto h1 {
   font-family:didot,serif,helvética;
   
 }
-
-
+@media only screen and (max-width: 767px) {
+  #img-descripcion {
+    width:100%;
+    height:15em;
+  }
+}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
-/*+++++++++ Fin de Seccion para Marce ++++++++++*/
+/*+++++++++  ++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
 
 #variedad-img {

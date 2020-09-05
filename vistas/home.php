@@ -15,9 +15,7 @@ include_once "plantillas/documento-apertura.inc.php";
     ?>
         <div class="mySlides fade">
           <!-- Extraer img de db -->
-          <img class="" 
-          src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>" 
-          style="height: 25em;width: 100%;">
+          <img class="imagenes_banner" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
         </div>
     <?php
     }
@@ -187,7 +185,7 @@ include_once "plantillas/documento-apertura.inc.php";
     </div>
 </div>
 <div id="menu">
-    <span id="btnMenu" onclick="openNav()">&#9776; Menú</span>
+    <span class="btnMenu" onclick="openNav()">&#9776; Menú</span>
 </div>  
 <!-- Fin Botón Menú -->
 

@@ -1,8 +1,5 @@
-<div class="container-fluid" id="descripcion">     
+<div class="container-fluid" id="descripcion-vino">         
     <div class="row">
-        <div class="col-md-4 col-sm-4">
-        	<img  class="img-responsive" style="margin:0;width:100%;" src="<?php echo RUTA_IMG ?>vino-tinto.jpg">
-        </div>
         <div class="col-md-8 col-sm-8" id="descripcion-texto">
         	<h1><b>Vino Tinto</b></h1>
         	<p style="font-size: 20px"><b>
@@ -10,5 +7,8 @@
         		aroma personal y el sabor que lo diferencia.
         	</b></p>
         </div>
+        <div class="col-md-4 col-sm-4" style="padding: 0em;">
+            <img id="img-descripcion" class="img-responsive" src="<?php echo RUTA_IMG ?>vino-tinto.jpg">
+        </div>        
     </div>
 </div>            	

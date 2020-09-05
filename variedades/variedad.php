@@ -21,14 +21,14 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
 <!-- Visualizacion de Productos -->
 <div class="container-fluid" style="background-color: black;padding-bottom: 5em;">
     <?php                
-    $query = "SELECT * FROM tabla_vino_tinto";
+    $query = "SELECT * FROM tabla_vino_".$tipo_vino;
     $resultado = $conexion->query($query);
     while($row = $resultado->fetch_assoc()){
     ?>
 	
     <div class="row" >
         <br>
-    	<img  class="img-responsive" style="margin:0;width:100%;" src="<?php echo RUTA_IMG ?>sepnegro.jpg">
+    	<img  class="img-responsive" style="margin:auto;width:80%;" src="<?php echo RUTA_IMG ?>sepnegro.jpg">
         <br>
 		<div class="col-md-5 col-sm-5">
 			<center>
