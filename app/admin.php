@@ -66,7 +66,7 @@ include_once("plantillas/admin-navegador.inc.php");
         </div> 
         <div class="col-md-3">
             <div id="jumbotrom-admin" class="jumbotrom">
-                <h3><b>Tabla Banner</b></h3>
+                <h3><b>Tabla Vino Rosa</b></h3>
                 <hr id="separador-admin">
                 <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_VINO_ROSA; ?>" >
                     Subir Nueva Imagen

@@ -6,11 +6,8 @@ $tipo_vino = $_REQUEST['vino'];
 $titulo = "Vinos - $tipo_vino";
 
 include_once "plantillas/documento-apertura.inc.php";
+include_once "plantillas/encabezado.inc.php";
 ?>
-
-<div id="titulo">
-	<img class="img-responsive" style="margin:auto;width:100%;" src="<?php echo RUTA_IMG ?>titulo.jpg">
-</div>
 
 <!-- Descripcion del vino -->
 <?php
@@ -19,41 +16,34 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
 <!-- Fin de Descripcion del vino -->
 
 <!-- Visualizacion de Productos -->
-<div class="container-fluid" style="background-color: black;padding-bottom: 5em;">
-    <?php                
-    $query = "SELECT * FROM tabla_vino_".$tipo_vino;
-    $resultado = $conexion->query($query);
-    while($row = $resultado->fetch_assoc()){
-    ?>
-	
+<div class="container-fluid" style="background-image: url('img/fondo-producto.jpg');">
+    <br><br>
     <div class="row" >
-        <br>
-    	<img  class="img-responsive" style="margin:auto;width:80%;" src="<?php echo RUTA_IMG ?>sepnegro.jpg">
-        <br>
-		<div class="col-md-5 col-sm-5">
-			<center>
-   				<img id="variedad-img" class="img-responsive" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
-			</center>
-		</div>
-		<div class="col-md-7 col-sm-7">
-            <div class="container" style="width: 100%">
-
-				<h3 style="text-align: center; color:white;"><b><?php echo $row['nombre']; ?></b></h3>
-			    <br>
-
-			 	<p style="text-align:justify; color:white;"><?php echo $row['descripcion']; ?></p>
+        <!--
+        <img  class="img-responsive" style="margin:auto;width:80%;" src="<?php echo RUTA_IMG ?>sepnegro.jpg">
+        -->
+        <?php                
+        $query = "SELECT * FROM tabla_vino_".$tipo_vino;
+        $resultado = $conexion->query($query);
+        while($row = $resultado->fetch_assoc()){
+        ?>
+ 
+		<div class="col-md-4 col-sm-6 col-xs-6" style="padding-bottom: 3em;">
+            <div id="contenedor-vino">
+                <img id="variedad-img" class="img-responsive" 
+                src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
                 <br>
-
-			    <h3 style="text-align: center; color:white;"><b>$ <?php echo $row['precio']; ?></b></h3>
-            </div>	       
-		</div>
-		<br>
-		<br>
+                <h3><b><?php echo $row['nombre']; ?></b></h3>
+                <br>
+                <p><?php echo $row['descripcion']; ?></p>
+                <br>
+                <p><b>$ <?php echo $row['precio']; ?></b></p>
+            </div>
+		</div>    
+        <?php
+        }
+        ?>        
 	</div>
-	
-    <?php
-    }
-    ?>
 </div>
 <!-- Fin de Visualizacion de Productos -->
 
