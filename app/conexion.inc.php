@@ -1,5 +1,6 @@
 <?php
-	$conexion = new mysqli("localhost", "root", "", "vino");
+	//$conexion = new mysqli("localhost", "host", "bocala12", "vino");    // DOMINIO
+	$conexion = new mysqli("localhost", "root", "", "vino");    // LOCALHOST
 
 	if ($conexion) {
 	} else {

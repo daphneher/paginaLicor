@@ -1,6 +1,6 @@
 <?php
 
-//define("SERVIDOR", "http://solutec-it.com");   // DOMINIO  
+//define("SERVIDOR", "https://ideasdelvino.com");   // DOMINIO  
 define("SERVIDOR", "http://localhost/vinos");   // LOCALHOST
 
 // Rutas Vistas

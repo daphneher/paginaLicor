@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once "mostrar_errores.inc.php";
 
 $titulo = "Iniciar Sesión";
@@ -8,7 +9,7 @@ include_once "plantillas/documento-apertura.inc.php";
 if (isset($_POST['login'])) {
 
 	if ($_POST["usuario"] == NOMBRE_USER & $_POST["clave"] == CLAVE_USER) {
-		session_start();
+		
 		$_SESSION['usuario'] = NOMBRE_USER;
 		
 	    header("Location: ".USER);

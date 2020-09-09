@@ -16,7 +16,7 @@ $partes_ruta = array_slice($partes_ruta, 0);
 
 $ruta_elegida = 'vistas/404.php';
 
-//if ($partes_ruta[0] == 'solutec-it.com') {  // Dominio 
+//if ($partes_ruta[0] == 'ideasdelvino.com') {  // Dominio 
 if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 
 	if (count($partes_ruta) == 1) {
