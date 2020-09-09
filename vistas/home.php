@@ -4,6 +4,7 @@ include_once "mostrar_errores.inc.php";
 $titulo = "Vinos - Home";
 
 include_once "plantillas/documento-apertura.inc.php";
+include_once "plantillas/encabezado.inc.php";
 ?>
 
 <!-- Banner -->

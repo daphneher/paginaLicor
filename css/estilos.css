@@ -418,3 +418,26 @@ input[type=text]:focus, input[type=password]:focus {
   height:28em; 
   margin:auto;
 }
+
+#encabezado {
+  background-color:#F7D366;
+}
+
+#iconoe {
+  color:#310305;
+  margin: 5px;
+}
+
+#correo {
+  color:#310305;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 450px) {
+  #correo {
+    font-size: 15px;
+  }
+  .fa-instagram, .fa-facebook-official, .fa-youtube-play, .fa-envelope-o {
+    font-size: 1.5em !important;
+  }
+}
