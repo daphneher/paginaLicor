@@ -69,19 +69,9 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
 <!-- Fin Pie de pagina -->
 
  <!-- Botón Menú -->
-<div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-        <a href="<?php echo SERVIDOR;?>#">Inicio</a>
-        <a href="<?php echo SERVIDOR;?>#nosotros">Nosotros</a>
-        <a href="<?php echo SERVIDOR;?>#nuestros-vinos">Nuestros Vinos</a>
-        <a href="<?php echo SERVIDOR;?>#contacto">Contacto</a>
-        <a href="<?php echo SERVIDOR;?>#ubicacion">Ubicación</a>
-    </div>
-</div>
-<div id="menu">            
-    <span class="btnMenu" onclick="openNav()">&#9776; Menú</span>
-</div>  
+<?php
+include_once "plantillas/menu.inc.php";
+?>
 <!-- Fin Botón Menú -->
 
 <!-- Botón Wsp -->

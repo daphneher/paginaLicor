@@ -175,19 +175,9 @@ include_once "plantillas/encabezado.inc.php";
 <!-- Fin Pie de pagina -->
 
 <!-- Botón Menú -->
-<div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-        <a href="#">Inicio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#nuestros-vinos">Nuestros Vinos</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#ubicacion">Ubicación</a>
-    </div>
-</div>
-<div id="menu">
-    <span class="btnMenu" onclick="openNav()">&#9776; Menú</span>
-</div>  
+<?php
+include_once "plantillas/menu.inc.php"
+?>
 <!-- Fin Botón Menú -->
 
 <!-- Botón Wsp -->
