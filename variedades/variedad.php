@@ -25,24 +25,45 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
         <?php                
         $query = "SELECT * FROM tabla_vino_".$tipo_vino;
         $resultado = $conexion->query($query);
+        $img_actual = 0;
         while($row = $resultado->fetch_assoc()){
+            $img_actual++;
         ?>
  
-		<div class="col-md-4 col-sm-6 col-xs-6" style="padding-bottom: 3em;">
-            <div id="contenedor-vino">
-                <img id="variedad-img" class="img-responsive" 
-                src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
-                <br>
-                <h3><b><?php echo $row['nombre']; ?></b></h3>
-                <br>
-                <p><?php echo $row['descripcion']; ?></p>
-                <br>
-                <p><b>$ <?php echo $row['precio']; ?></b></p>
-            </div>
-		</div>    
+    		<div class="col-md-4 col-sm-6 col-xs-6" style="padding-bottom: 3em;">
+                <div id="contenedor-vino">
+                    <img id="variedad-img" class="img-responsive" class="hover-shadow cursor" 
+                    src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>"
+                    onclick="openModal();currentSlide(<?php echo $img_actual; ?>)">
+                    <br>
+                    <h3 style="color:black; text-align: center;"><b><?php echo $row['nombre']; ?></b></h3>
+                    <br>
+                    <p style="color:black;padding-right:0.4em;padding-left:0.4em;"><?php echo $row['descripcion']; ?></p>
+                    <br>
+                    <p style="color:red;font-size: 1.7em; text-align: center;"><b>$ <?php echo $row['precio']; ?></b></p>
+                </div>
+    		</div>
         <?php
         }
-        ?>        
+        ?> 
+
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <?php                
+                $query = "SELECT * FROM tabla_vino_".$tipo_vino;
+                $resultado = $conexion->query($query);
+                $img_actual = 0;
+                while($row = $resultado->fetch_assoc()){
+                ?>                
+                    <div class="mySlides">
+                      <img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
+                    </div>
+                <?php
+                }
+                ?>     
+            </div>
+        </div>    
 	</div>
 </div>
 <!-- Fin de Visualizacion de Productos -->
@@ -94,6 +115,39 @@ function closeNav() {
 }
 </script>
 <!-- Fin Botón Menú -->
+
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
 
 <?php
 include_once "plantillas/documento-cierre.inc.php";

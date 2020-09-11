@@ -110,7 +110,7 @@ div#smart a:hover, div#smart a:active {
   font-size: 30px;
   cursor: pointer;
   position: fixed;
-  top: 0.1em;
+  top: 1.4em;
   background-color: #10101085;
   padding-left: 0.4em;
   padding-right: 0.4em;
@@ -133,10 +133,10 @@ div#smart a:hover, div#smart a:active {
 
 .overlay-content {
   position: relative;
-  top: 20%;
+  top: 25%;
   width: 100%;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 30px;
 }
 
 .overlay a {
@@ -175,7 +175,7 @@ div#smart a:hover, div#smart a:active {
 @media only screen and (max-width: 450px) {
   .btnMenu {
     font-size: 20px;
-    top: 13%;
+    top: 19%;
   }
 }
 /*+++++++++++++++++++++++++++++++++++++++*/
@@ -399,6 +399,7 @@ input[type=text]:focus, input[type=password]:focus {
   height:20em;
 }
 
+
 #descripcion-texto p, #descripcion-texto h1 {
   font-family:didot,serif,helvética;
   
@@ -410,12 +411,18 @@ input[type=text]:focus, input[type=password]:focus {
   }
 }
 
+
 #contenedor-vino {
   background-color: white;
   border-radius: 1em;
   padding: 1em;
+  border-color: #958f8f;
+  border-width: 1px;
+  border-style: solid;
 }
-
+#contenedor-vino:hover {
+  border-color: black;
+}
 #contenedor-vino p { 
   color:#000000;
   text-align:justify;
@@ -428,9 +435,6 @@ input[type=text]:focus, input[type=password]:focus {
   }
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++*/
-/*+++++++++  ++++++++++*/
-/*++++++++++++++++++++++++++++++++++++++++++++++*/
 
 #variedad-img {
   width:60%;
@@ -446,6 +450,142 @@ input[type=text]:focus, input[type=password]:focus {
 
   }
 }
+
+/*   Efecto LightBox   */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 40%;
+  height:38em; 
+}
+
+.mySlides {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 60%;
+  height:100%; 
+}
+
+.mySlides img {
+  width:100%;
+  height:100%; 
+  margin:auto;
+}
+
+@media only screen and (max-width: 450px) {
+   #myModal {
+     padding-top: 5.5em;
+   }
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    height:35em; 
+  }
+
+  .mySlides {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height:100%; 
+  }
+
+  .mySlides img {
+    width:100%;
+    height:100%; 
+    margin:auto;
+  }
+}
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++  ++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
 
 #encabezado {
   background-color:#F7D366;
