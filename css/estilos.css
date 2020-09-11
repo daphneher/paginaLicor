@@ -110,10 +110,10 @@ div#smart a:hover, div#smart a:active {
   font-size: 30px;
   cursor: pointer;
   position: fixed;
-  top: 1.4em;
   background-color: #10101085;
   padding-left: 0.4em;
   padding-right: 0.4em;
+  top: 1.4em;
   padding-top:0.2em;
   color: #efb810c7;
   left: 0.1em;
@@ -171,13 +171,33 @@ div#smart a:hover, div#smart a:active {
   top:10%;
   }
 }
+ 
+/* --- Clase que agregaremos cuando el usuario haga scroll --- */
+.sticky {
+   font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  background-color: #10101085;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  top: 0em;
+  padding-top:0.2em;
+  color: #efb810c7;
+  left: 0.1em;
+
+}
 
 @media only screen and (max-width: 450px) {
   .btnMenu {
     font-size: 20px;
     top: 19%;
   }
+  .sticky {
+    font-size: 20px;
+  }
 }
+
+
 /*+++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++ Pie de Pagina +++++++++++++*/
 /*+++++++++++++++++++++++++++++++++++++++*/

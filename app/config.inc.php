@@ -10,6 +10,9 @@ define("CERRAR_SESION", SERVIDOR . "/cerrar_sesion");
 // Variedades
 define("VARIEDAD", SERVIDOR . "/variedad");
 
+// Blogs
+define("BLOG", SERVIDOR . "/blog");
+
 // Rutas Recursos
 define("RUTA_CSS", SERVIDOR . "/css/");
 define("RUTA_JS", SERVIDOR . "/js/");

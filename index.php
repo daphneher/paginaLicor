@@ -37,6 +37,11 @@ if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 				$ruta_elegida = "variedades/variedad.php";
 				break;
 
+			// blogs
+			case 'blog':
+				$ruta_elegida = "blogs/blog.php";
+				break;
+
 			// Usuario de base datos	
 			case 'un-buen-vino-al-alcance-de-un-click':
 				$ruta_elegida = "app/admin.php";

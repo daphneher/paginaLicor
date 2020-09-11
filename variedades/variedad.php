@@ -114,6 +114,26 @@ function closeNav() {
   document.getElementById("menu").style.display = "block";
 }
 </script>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    // Get the navbar
+    var navbar = document.getElementById("btn-menu");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.remove("btnMenu")
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+        navbar.classList.add("btnMenu")
+      }
+    }
+</script>
 <!-- Fin Botón Menú -->
 
 
