@@ -141,8 +141,7 @@ include_once "plantillas/encabezado.inc.php";
     <p>Vea nuestros últimos artículos relacionados al vino</p>
     <center style="margin: 2em">
         <a type="button" class="btn btn-default" href="<?php echo BLOG ?>" >Ver Blogs</a>
-    </center>
-    
+    </center>    
 </div>
 <!-- Fin Main -->
 
@@ -168,7 +167,6 @@ include_once "plantillas/encabezado.inc.php";
 <!-- Fin Pie de pagina -->
 
 <!-- Botón Menú -->
-
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
@@ -182,13 +180,12 @@ include_once "plantillas/encabezado.inc.php";
                 <li><a class="dropdown-item" href="<?php echo VARIEDAD."?vino=rosa"; ?>" style="color: #efb810c7; font-size:20px;"> Vino Rosa 3</a></li>
                 <li><a class="dropdown-item" href="#" style="color: #efb810c7; font-size:20px;"> Otros Productos </a></li>
           </ul>
-        <a href="#blog">blog</a>
+        <a href="#blog">Blog</a>
     </div>
 </div>
 <div id="menu" >
     <span id="btn-menu" class="btnMenu" onclick="openNav()">&#9776; Menú</span>
 </div> 
-
 <!-- Fin Botón Menú -->
 
 <!-- Botón Wsp -->
@@ -196,6 +193,8 @@ include_once "plantillas/encabezado.inc.php";
     <i class="fa fa-whatsapp"></i>
 </a> 
 <!-- Fin Botón Wsp -->
+
+<!-- Botón Menú -->
 <script>
     window.onscroll = function() {myFunction()};
 
@@ -216,6 +215,7 @@ include_once "plantillas/encabezado.inc.php";
       }
     }
 </script>
+<!-- Fin Botón Menú -->
 <?php 
 include_once "plantillas/home-js.inc.php"; 
 include_once "plantillas/documento-cierre.inc.php";

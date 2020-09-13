@@ -38,9 +38,11 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
                     <br>
                     <h3 style="color:black; text-align: center;"><b><?php echo $row['nombre']; ?></b></h3>
                     <br>
-                    <p style="color:black;padding-right:0.4em;padding-left:0.4em;"><?php echo $row['descripcion']; ?></p>
+                    <?php include "variedades/text_descripcion.inc.php"; ?>
                     <br>
-                    <p style="color:red;font-size: 1.7em; text-align: center;"><b>$ <?php echo $row['precio']; ?></b></p>
+                    <p id="precio_variedad">
+                      <b><?php echo "$ ".$row['precio']; ?></b>
+                    </p>
                 </div>
     		</div>
         <?php
@@ -56,7 +58,7 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
                 $img_actual = 0;
                 while($row = $resultado->fetch_assoc()){
                 ?>                
-                    <div class="mySlides">
+                    <div class="mySlides" id="mySlides_variedad">
                       <img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
                     </div>
                 <?php
@@ -101,6 +103,7 @@ include_once "plantillas/menu.inc.php";
 </a> 
 <!-- Fin Botón Wsp -->
 
+
 <!-- Botón Menú -->
 <script>
 function openNav() {
@@ -114,6 +117,7 @@ function closeNav() {
   document.getElementById("menu").style.display = "block";
 }
 </script>
+
 <script>
     window.onscroll = function() {myFunction()};
 

@@ -45,8 +45,9 @@ if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 			// Usuario de base datos	
 			case 'un-buen-vino-al-alcance-de-un-click':
 				$ruta_elegida = "app/admin.php";
-				break;	
+				break;
 		}
+
 	} else if (count($partes_ruta) == 3 & $partes_ruta[1]==='un-buen-vino-al-alcance-de-un-click') {	
 		switch ($partes_ruta[2]) {
 			// Manejo de base de datos

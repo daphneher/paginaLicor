@@ -110,10 +110,10 @@ div#smart a:hover, div#smart a:active {
   font-size: 30px;
   cursor: pointer;
   position: fixed;
+  top: 1.4em;
   background-color: #10101085;
   padding-left: 0.4em;
   padding-right: 0.4em;
-  top: 1.4em;
   padding-top:0.2em;
   color: #efb810c7;
   left: 0.1em;
@@ -171,8 +171,7 @@ div#smart a:hover, div#smart a:active {
   top:10%;
   }
 }
- 
-/* --- Clase que agregaremos cuando el usuario haga scroll --- */
+
 .sticky {
    font-size: 30px;
   cursor: pointer;
@@ -196,8 +195,6 @@ div#smart a:hover, div#smart a:active {
     font-size: 20px;
   }
 }
-
-
 /*+++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++ Pie de Pagina +++++++++++++*/
 /*+++++++++++++++++++++++++++++++++++++++*/
@@ -405,6 +402,32 @@ input[type=text]:focus, input[type=password]:focus {
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++   Variedad   +++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#text_descripcion {
+  font-family: EB Garamond; 
+  font-weight: normal;
+  font-style: italic;
+  font-variant: normal;
+  color:black;
+  padding-right:0.4em;
+  padding-left:0.4em;
+  font-size: 1.3em;
+}
+
+#precio_variedad {
+  color:red !important;
+  font-size: 1.7em !important; 
+  text-align: center !important;
+}
+@media only screen and (max-width: 450px) {
+  #precio_variedad {
+    font-size: 1.1em !important;
+  }
+  #text_descripcion {
+    font-size: 1.1em !important;
+  }
+}
+
+
 #titulo {
   color:black;
 }
@@ -499,7 +522,7 @@ input[type=text]:focus, input[type=password]:focus {
   height:38em; 
 }
 
-.mySlides {
+#mySlides_variedad {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -508,7 +531,7 @@ input[type=text]:focus, input[type=password]:focus {
   height:100%; 
 }
 
-.mySlides img {
+#mySlides_variedad img {
   width:100%;
   height:100%; 
   margin:auto;
@@ -527,7 +550,7 @@ input[type=text]:focus, input[type=password]:focus {
     height:35em; 
   }
 
-  .mySlides {
+  #mySlides_variedad {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -536,7 +559,7 @@ input[type=text]:focus, input[type=password]:focus {
     height:100%; 
   }
 
-  .mySlides img {
+  #mySlides_variedad img {
     width:100%;
     height:100%; 
     margin:auto;
@@ -559,7 +582,7 @@ input[type=text]:focus, input[type=password]:focus {
   cursor: pointer;
 }
 
-.mySlides {
+#mySlides_variedad {
   display: none;
 }
 
