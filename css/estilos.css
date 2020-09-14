@@ -119,6 +119,11 @@ div#smart a:hover, div#smart a:active {
   left: 0.1em;
 }
 
+#btnSubmenu {
+  color: #efb810c7; 
+  font-size:20px;
+}
+
 .overlay {
   height: 100%;
   width: 0;
@@ -140,7 +145,7 @@ div#smart a:hover, div#smart a:active {
 }
 
 .overlay a {
-  padding: 8px;
+  padding: 4px;
   text-decoration: none;
   font-size: 36px;
   color: #efb810c7;
@@ -156,20 +161,22 @@ div#smart a:hover, div#smart a:active {
   position: absolute;
   top: 20px;
   right: 45px;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
   font-size: 40px;
-  top: 15px;
+  top: 0px;
   right: 35px;
   }
 
   .overlay-content {
   top:10%;
   }
+
+ 
 }
 
 .sticky {
@@ -194,6 +201,28 @@ div#smart a:hover, div#smart a:active {
   .sticky {
     font-size: 20px;
   }
+
+  #btnSubmenu { 
+  font-size:17px;
+  }
+}
+
+#submenu {
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 61%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+ .dropdown-backdrop {
+    display:none;
 }
 /*+++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++ Pie de Pagina +++++++++++++*/
