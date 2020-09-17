@@ -11,7 +11,7 @@ include_once "plantillas/encabezado.inc.php";
 
 <!-- Descripcion del vino -->
 <?php
-include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
+include_once "variedades/descripcion-tabla_vino_$tipo_vino.inc.php";
 ?>
 <!-- Fin de Descripcion del vino -->
 
