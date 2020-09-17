@@ -15,59 +15,12 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
 ?>
 <!-- Fin de Descripcion del vino -->
 
-<!-- Visualizacion de Productos -->
-<div class="container-fluid" style="background-image: url('img/fondo-producto.jpg');">
-    <br><br>
-    <div class="row" >
-        <!--
-        <img  class="img-responsive" style="margin:auto;width:80%;" src="<?php echo RUTA_IMG ?>sepnegro.jpg">
-        -->
-        <?php                
-        $query = "SELECT * FROM tabla_vino_".$tipo_vino;
-        $resultado = $conexion->query($query);
-        $img_actual = 0;
-        while($row = $resultado->fetch_assoc()){
-            $img_actual++;
-        ?>
- 
-    		<div class="col-md-4 col-sm-6 col-xs-6" style="padding-bottom: 3em;">
-                <div id="contenedor-vino">
-                    <img id="variedad-img" class="img-responsive" class="hover-shadow cursor" 
-                    src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>"
-                    onclick="openModal();currentSlide(<?php echo $img_actual; ?>)">
-                    <br>
-                    <h3 style="color:black; text-align: center;"><b><?php echo $row['nombre']; ?></b></h3>
-                    <br>
-                    <?php include "variedades/text_descripcion.inc.php"; ?>
-                    <br>
-                    <p id="precio_variedad">
-                      <b><?php echo "$ ".$row['precio']; ?></b>
-                    </p>
-                </div>
-    		</div>
-        <?php
-        }
-        ?> 
 
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-                <?php                
-                $query = "SELECT * FROM tabla_vino_".$tipo_vino;
-                $resultado = $conexion->query($query);
-                $img_actual = 0;
-                while($row = $resultado->fetch_assoc()){
-                ?>                
-                    <div class="mySlides" id="mySlides_variedad">
-                      <img src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
-                    </div>
-                <?php
-                }
-                ?>     
-            </div>
-        </div>    
-	</div>
-</div>
+
+<!-- Visualizacion de Productos -->
+<?php
+include_once "variedades/mostrar_img_vinos.inc.php";
+?>
 <!-- Fin de Visualizacion de Productos -->
 
 <!-- Pie de pagina -->
@@ -91,88 +44,9 @@ include_once "plantillas/descripcion-tabla_vino_$tipo_vino.inc.php";
 </div>
 <!-- Fin Pie de pagina -->
 
- <!-- Botón Menú -->
-<?php
-include_once "plantillas/menu.inc.php";
-?>
-<!-- Fin Botón Menú -->
 
-<!-- Botón Wsp -->
-<a href="https://www.google.com" target="_blank">
-    <i class="fa fa-whatsapp"></i>
-</a> 
-<!-- Fin Botón Wsp -->
-
-
-<!-- Botón Menú -->
-<script>
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-  document.getElementById("menu").style.display = "none";
-
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-  document.getElementById("menu").style.display = "block";
-}
-</script>
-
-<script>
-    window.onscroll = function() {myFunction()};
-
-    // Get the navbar
-    var navbar = document.getElementById("btn-menu");
-
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.remove("btnMenu")
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-        navbar.classList.add("btnMenu")
-      }
-    }
-</script>
-<!-- Fin Botón Menú -->
-
-
-<script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-}
-</script>
 
 <?php
+include_once "variedades/js_variedades.inc.php";
 include_once "plantillas/documento-cierre.inc.php";
 ?>

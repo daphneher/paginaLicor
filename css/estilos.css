@@ -175,8 +175,6 @@ div#smart a:hover, div#smart a:active {
   .overlay-content {
   top:10%;
   }
-
- 
 }
 
 .sticky {
@@ -431,7 +429,7 @@ input[type=text]:focus, input[type=password]:focus {
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++   Variedad   +++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-#text_descripcion {
+.text_descripcion {
   font-family: EB Garamond; 
   font-weight: normal;
   font-style: italic;
@@ -451,7 +449,7 @@ input[type=text]:focus, input[type=password]:focus {
   #precio_variedad {
     font-size: 1.1em !important;
   }
-  #text_descripcion {
+  .text_descripcion {
     font-size: 1.1em !important;
   }
 }
@@ -653,6 +651,24 @@ img.hover-shadow {
   from {transform:scale(0)} 
   to {transform:scale(1)}
 }
+
+
+.LeerMas {
+  display: block;
+} 
+
+.text_incompleto {
+  display: block;
+}
+
+.LeerMenos {
+  display: none;
+} 
+.text_completo {
+  display: none;
+}
+
+
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++  ++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++*/

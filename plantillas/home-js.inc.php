@@ -46,18 +46,3 @@
     } 
 </script>
 <!-- Fin Banner -->
-
-<!-- Botón Menú -->
-<script>
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-  document.getElementById("menu").style.display = "none";
-
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-  document.getElementById("menu").style.display = "block";
-}
-</script>
-<!-- Fin Botón Menú -->
