@@ -259,7 +259,7 @@ div#smart a:hover, div#smart a:active {
   }
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/s
 /*++++++++++++ Nuestros Vinos +++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #copas {
@@ -372,7 +372,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++++++++++++++ Navegador Admin +++++++++++++++++++++*/
+/*+++++++++++ Navegador Admin +++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #navbar-admin {
   color:white !important;
@@ -667,37 +667,24 @@ img.hover-shadow {
 .text_completo {
   display: none;
 }
-@media only screen and (max-height: 450px) {
-  .col_mostrar_img_horizontal {
-    width: 50%;
-  }
-}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
-/*+++++++++++++++++++ BLOG +++++++++++++++++++++*/
+/*+++++++++ blog ++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
-
-@media only screen and (max-height:450px) {
-  #img_blog {
-    width:50%;
-    margin: auto;
-  }
-}
 
 #principal{
   width: 80%;
   height: auto;
   overflow: hidden;
-  border: 1px solid red;
-  margin: 10px;
+  margin: auto;
 }
 
 #publicaciones{
   width: 70%;
   height: auto;
   overflow: hidden;
-  border: 1px solid;
   margin: 10px auto;
+  float: left;
 }
 
 .post{
@@ -708,7 +695,7 @@ img.hover-shadow {
   background-color: #fdfdfd;
   border-left-style: solid;
   border-left-width: 5px;
-  border-left-color: #0489B1;
+  border-left-color: #994C4A;
   border-radius: 10px;
   box-shadow: 0px 0px 15px #ccc; 
   margin-bottom: 25px;
@@ -753,6 +740,67 @@ img.hover-shadow {
   border-radius: 5px;
 }
 
+#sidebar{
+  float: right;
+  width: 28%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#buscar, #categorias, #ultimos-post{
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+form{
+  margin-top: 10px;
+}
+
+#buscar input[type="text"]{
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #ccc inset;
+  padding: 10px 4px;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: 4px;
+  margin-bottom: 4px;
+
+}
+
+#buscar .boton{
+  border: 0px;
+  color: #fff;
+  background: #970601;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.encabezado-sidebar{
+  width: 100%;
+  height: 35px;
+  background:#970601;
+  text-align: center;
+  color: #fff;
+  font-family: 'calibri-light';
+  border-radius: 10px;
+}
+
+.enlace-sidebar{
+  width: 100% !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid #ccc !important;
+  padding: 10px 5px !important;
+  color: #848484 !important;
+}
+
+.enlace-sidebar:hover{
+  background: #f2f2f2;
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++  ++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
