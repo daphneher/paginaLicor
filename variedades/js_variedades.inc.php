@@ -1,4 +1,3 @@
-
 <!-- Ver Imagenes Productos -->
 <script>
 function openModal() {
@@ -60,9 +59,3 @@ function closeLeerMas(n) {
 }
 </script>
 <!-- Fin Leer Mas -->
-
-<!-- Botón Menú -->
-<?php
-include_once "plantillas/menu.inc.php";
-?>
-<!-- Fin Botón Menú -->

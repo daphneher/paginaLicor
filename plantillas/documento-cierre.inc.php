@@ -1,12 +1,10 @@
 		 
-
 		<!-- Botón Wsp -->
 		<a href="https://www.google.com" target="_blank">
 		    <i class="fa fa-whatsapp"></i>
 		</a> 
 		<!-- Fin Botón Wsp -->
 		
-
 		<!-- Botón Menú -->
 		<script>
 		function openNav() {

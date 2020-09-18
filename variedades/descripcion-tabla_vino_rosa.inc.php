@@ -1,7 +1,7 @@
 <div class="container-fluid" id="descripcion-vino">         
     <div class="row">
         <div class="col-md-8 col-sm-8" id="descripcion-texto">
-            <h1><b>Vino Tinto</b></h1>
+            <h1><b>Vino Rosa</b></h1>
             <p style="font-size: 20px"><b>
                 El vino es producto de la transformación de la uva, fruto de la cepa. En el caso de los vinos tintos, la uva tinta, aporta al caldo el color a través de su piel, el    
                 aroma personal y el sabor que lo diferencia.

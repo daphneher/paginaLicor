@@ -15,8 +15,6 @@ include_once "variedades/descripcion-tabla_vino_$tipo_vino.inc.php";
 ?>
 <!-- Fin de Descripcion del vino -->
 
-
-
 <!-- Visualizacion de Productos -->
 <?php
 include_once "variedades/mostrar_img_vinos.inc.php";
@@ -45,6 +43,11 @@ include_once "variedades/mostrar_img_vinos.inc.php";
 <!-- Fin Pie de pagina -->
 
 
+<!-- Botón Menú -->
+<?php
+include_once "plantillas/menu.inc.php";
+?>
+<!-- Fin Botón Menú -->
 
 <?php
 include_once "variedades/js_variedades.inc.php";

@@ -14,7 +14,7 @@
 <?php
           }
 ?>
-    <div class="col-md-3 col-sm-6 col-xs-6" style="padding-bottom: 3em;">
+    <div class="col-md-3 col-sm-3 col-xs-6 col_mostrar_img_horizontal" style="padding-bottom: 3em;">
         <div id="contenedor-vino">
             <img id="variedad-img" class="img-responsive" class="hover-shadow cursor" 
             src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>"
