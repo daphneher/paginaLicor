@@ -46,3 +46,31 @@
     } 
 </script>
 <!-- Fin Banner -->
+
+<!-- BLOG -->
+<script>
+var paginacion = document.getElementsByClassName("paginacion_blog");
+var index_paginacion = document.getElementsByClassName("paginacion_index");
+for (i = 0; i < paginacion.length; i++) {
+    paginacion[i].style.display = "none";
+    index_paginacion[i].style.backgroundColor = "white";
+    index_paginacion[i].style.color = "black";
+}
+paginacion[0].style.display = "block";
+index_paginacion[0].style.backgroundColor = "#9f2428";
+index_paginacion[0].style.color = "white";
+
+function cambiarPagina(n) {
+    var paginacion = document.getElementsByClassName("paginacion_blog");
+    var index_paginacion = document.getElementsByClassName("paginacion_index");
+    for (i = 0; i < paginacion.length; i++) {
+        paginacion[i].style.display = "none";
+        index_paginacion[i].style.backgroundColor = "white";
+        index_paginacion[i].style.color = "black";
+    }
+    paginacion[n-1].style.display = "block";
+    index_paginacion[n-1].style.backgroundColor = "#9f2428";
+    index_paginacion[n-1].style.color = "white"
+}
+</script>
+<!-- FIN DE BLOG -->
