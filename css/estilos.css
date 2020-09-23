@@ -260,6 +260,7 @@ p, h1, h2, h3 {
   padding: 0.3em;
   background-color:#371b0fe0;
 }
+
 #copas:hover {
   background-color:#371b0fc7;
 }
@@ -303,6 +304,38 @@ p, h1, h2, h3 {
   margin:0.2em
 }
 
+#titulo-nuestros-vinos {
+  text-align:center;
+  font-size: 3em;
+  margin-bottom:0em;
+}
+
+#sep-nuestros-vinos {
+  margin:auto;
+}
+
+#texto-nuestros-vinos {
+  font-size:1.3em;
+}
+
+@media screen and (max-width: 450px) {
+  #titulo-nuestros-vinos {
+    width:80%;
+    margin:auto;
+    margin-top:0.8em;
+    font-size:2.5em;
+
+  }
+  #sep-nuestros-vinos {
+    width:90%;
+
+  }
+  #texto-nuestros-vinos {
+    padding-left:1em;
+    padding-right:1em;
+    font-size:1em;
+  }
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++ Iniciar Sesion ++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -880,7 +913,6 @@ form{
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #nosotros {
   color: #403d3d;
-  background-color:white;
   padding-bottom: 1em;
   padding-top:0.5em;
   padding-right:1.3em;
@@ -890,6 +922,10 @@ form{
   margin-top:1.3em;
   margin-right: 1em;
   margin-left: 1em;
+
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 #nosotros h2, #nosotros p {
@@ -898,10 +934,12 @@ form{
 
 #nosotros h2 {
   font-size: 3em;
+  color: white;
 }
 
 #nosotros p {
   font-size:1.3em;
+  color: white;
 }
 .contenedor-nosotros {
   background-color: #0a0a0ab5;
@@ -914,6 +952,14 @@ form{
 }
 #titulo-nosotros img {
   margin: auto;
+}
+
+
+#texto-encima {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width:480px) {
