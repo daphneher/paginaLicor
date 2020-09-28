@@ -75,7 +75,12 @@ if ($partes_ruta[0] == 'vinos') {   // LOCALHOST
 			$ruta_elegida = "app/admin_proceso_modificar.inc.php";
 			break;
 		}
-	} 
+	} else if(count($partes_ruta) == 3 & $partes_ruta[1]==='blog')
+		switch ($partes_ruta[2]) {
+			case 'post' :
+			$ruta_elegida = "blogs/post.php";
+			break;
+		}
 }
 
 include_once $ruta_elegida;

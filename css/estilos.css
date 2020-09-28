@@ -907,6 +907,23 @@ form{
   }
 }
 
+#publicacion{
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+  margin: 10px auto;
+  float: left;
+}
+
+.titulo_post{
+  width: 100%;
+  height: 35px;
+  background:#970601;
+  text-align: center;
+  color: #fff;
+  font-family: 'calibri-light';
+  border-radius: 10px;
+}
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++++ NOSOTROS +++++++++++++++++++++++++*/

@@ -12,6 +12,7 @@ define("VARIEDAD", SERVIDOR . "/variedad");
 
 // Blogs
 define("BLOG", SERVIDOR . "/blog");
+define("POST", BLOG . "/post");
 
 // Rutas Recursos
 define("RUTA_CSS", SERVIDOR . "/css/");
