@@ -6,7 +6,8 @@ USE vino;
 CREATE TABLE tabla_banner (
 	id INT NOT NULL UNIQUE AUTO_INCREMENT,
 	nombre VARCHAR(50) NOT NULL,
-	imagen LONGBLOB NOT NULL
+	imagen LONGBLOB NOT NULL,
+	PRIMARY KEY(id)
 );
 
 CREATE TABLE tabla_vino_tinto (
@@ -14,7 +15,8 @@ CREATE TABLE tabla_vino_tinto (
 	nombre VARCHAR(50) NOT NULL,
 	imagen LONGBLOB NOT NULL,
 	descripcion VARCHAR(500) NOT NULL,
-	precio VARCHAR(20) NOT NULL
+	precio VARCHAR(20) NOT NULL,
+	PRIMARY KEY(id)
 );
 
 CREATE TABLE tabla_vino_blanco (
@@ -22,7 +24,8 @@ CREATE TABLE tabla_vino_blanco (
 	nombre VARCHAR(50) NOT NULL,
 	imagen LONGBLOB NOT NULL,
 	descripcion VARCHAR(500) NOT NULL,
-	precio VARCHAR(20) NOT NULL
+	precio VARCHAR(20) NOT NULL,
+	PRIMARY KEY(id)
 );
 
 CREATE TABLE tabla_vino_rosa (
@@ -30,5 +33,21 @@ CREATE TABLE tabla_vino_rosa (
 	nombre VARCHAR(50) NOT NULL,
 	imagen LONGBLOB NOT NULL,
 	descripcion VARCHAR(500) NOT NULL,
-	precio VARCHAR(20) NOT NULL
+	precio VARCHAR(20) NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE tabla_blog (
+	id INT NOT NULL UNIQUE AUTO_INCREMENT,
+	fecha DATETIME NOT NULL,
+	autor VARCHAR(50) NOT NULL,
+	categoria VARCHAR(50) NOT NULL,
+	titulo VARCHAR(150) NOT NULL,
+	img_presentacion LONGBLOB NOT NULL,
+	presentacion VARCHAR(250) NOT NULL,
+	texto1 VARCHAR(32766) NOT NULL,
+	img1 LONGBLOB NOT NULL,
+	texto2 VARCHAR(32766),
+	img2 LONGBLOB,
+	PRIMARY KEY(id)
 );

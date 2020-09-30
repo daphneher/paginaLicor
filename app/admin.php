@@ -76,11 +76,25 @@ include_once("plantillas/admin-navegador.inc.php");
                     Ver tabla
                 </a>
             </div>            
-        </div>               
+        </div>     
+        <div class="col-md-3">
+            <div id="jumbotrom-admin" class="jumbotrom">
+                <h3><b>Tabla Blog</b></h3>
+                <hr id="separador-admin">
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=tabla_blog"; ?>" >
+                    Subir Nuevo Post
+                </a>
+                <br><br>
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=tabla_blog"; ?>">
+                    Ver tabla
+                </a>
+            </div>            
+        </div>           
     </div>
     <br><br>
 </div>
 
-<?php
-include_once "plantillas/documento-cierre.inc.php";
-?>
+        <script src="<?php echo RUTA_JS ?>jquery.min.js"></script>
+        <script src="<?php echo RUTA_JS ?>bootstrap.min.js"></script> 
+    </body>
+</html>

@@ -7,7 +7,7 @@ include_once "plantillas/documento-apertura.inc.php";
 include_once "plantillas/encabezado.inc.php";
 ?>
 <section id="principal">
-  	<section id="buscar" class="show-mobile">
+    <section id="buscar" class="show-mobile">
       <form>
         <h2 class="encabezado-sidebar">Buscar</h2>
         <i class="fa fa-search" aria-hidden="true"></i>
