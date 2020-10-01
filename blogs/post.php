@@ -5,6 +5,9 @@ $titulo = "Blogs";
 
 include_once "plantillas/documento-apertura.inc.php";
 include_once "plantillas/encabezado.inc.php";
+
+$id = $_REQUEST['id'];
+
 ?>
 <section id="principal">
     
