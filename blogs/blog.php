@@ -22,22 +22,38 @@ include_once "plantillas/encabezado.inc.php";
     while($row = $resultado->fetch_assoc()){
     ?>
     <article class="post">
-      <a href="#" class="enlace-post">
+      <a href="<?php echo POST."?id=".$row['id'] ?>" class="enlace-post">
         <h2 class="titulo-post"><?php echo $row['titulo'];?></h2>
       </a>
+      <div class="row">
+        <div class="col-md-5">
+          <img src="data:image/jpg;base64,<?php echo base64_encode($row['img_presentacion']); ?>" 
+          class="img-post">
+          <br>
+          <p>
+            <strong>Por: </strong><span class="datos-publicaciones"><?php echo $row['autor']; ?></span>
+          </p>
+          <p>
+            <strong>Fecha: </strong><span class="datos-publicaciones">
+              <?php 
+              $fecha = explode(" ", $row['fecha']);
+              $fecha = array_filter($fecha);
+              $fecha = array_slice($fecha, 0);
+              echo $fecha[0]; 
+              ?>          
+            </span>
+          </p> 
 
-      <img src="data:image/jpg;base64,<?php echo base64_encode($row['img_presentacion']); ?>" class="img-post">
-      
-      <p>
-        <strong>Por:</strong><span class="datos-publicaciones"><?php echo $row['autor']; ?></span>
-        <strong>Fecha:</strong><span class="datos-publicaciones"><?php echo $row['fecha']; ?></span>
-      </p>
-
-      <p class="parrafo-post">
-        <?php echo $row['presentacion']; ?>
-      </p>
-
-      <a href="<?php echo POST."?id=".$row['id'] ?>" class="leer-mas">Leer mas...</a>
+        </div>
+        <div class="col-md-7">
+          <p class="parrafo-post">
+            <?php echo $row['presentacion']; ?>
+          </p> 
+          <br>
+          <a href="<?php echo POST."?id=".$row['id'] ?>" class="leer-mas">Leer mas...</a>       
+        </div>
+      </div>  
+      <br>    
     </article>
 
     <?php      
@@ -50,44 +66,9 @@ include_once "plantillas/encabezado.inc.php";
     </div>
   </section>
   
-  <section id="sidebar" class="hide-mobile">
-    <section id="buscar">
-      <h2 class="encabezado-sidebar">Buscar</h2>
-      <form>
-        <input type="text" name="buscar" placeholder="Buscar" >
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <button class="boton">Ok</button>
-      </form>
-    </section>
-
-    <section id="categorias">
-      <h2 class="encabezado-sidebar">Categorias</h2>
-      <a href="#" class="enlace-sidebar">Accesorios</a>
-      <a href="#" class="enlace-sidebar">Aprender de licores</a>
-      <a href="#" class="enlace-sidebar">Cocteles</a>
-      <a href="#" class="enlace-sidebar">Maridajes</a>
-      <a href="#" class="enlace-sidebar">Momentos para compartir </a>
-      <a href="#" class="enlace-sidebar">Expertos dicen </a>
-    </section>
-
-    <section id="ultimos-post">
-      <h2 class="encabezado-sidebar">Ultimos-post</h2>
-      <a href="#" class="enlace-sidebar">
-        <h2>Titulo del articulo</h2>
-        <p>Esta es una descripcion del articulo publicado en la fecha de hoy </p>
-      </a>
-      <a href="#" class="enlace-sidebar">
-        <h2>Titulo del articulo</h2>
-        <p>Esta es una descripcion del articulo publicado en la fecha de hoy </p>
-      </a>
-      <a href="#" class="enlace-sidebar">
-        <h2>Titulo del articulo</h2>
-        <p>Esta es una descripcion del articulo publicado en la fecha de hoy </p>
-      </a>
-      <a href="#" class="enlace-sidebar"><h2>Titulo del articulo</h2>
-        <p>Esta es una descripcion del articulo publicado en la fecha de hoy </p></a>
-    </section>
-  </section>
+  <?php
+  include_once "blogs/plantilla-de-blog.inc.php";
+  ?>
 </section>
 
 <!-- Pie de pagina -->

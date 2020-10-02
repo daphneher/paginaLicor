@@ -17,6 +17,14 @@ p {
 p, h1, h2, h3 {
   font-family:"Times New Roman",Times,serif;
 }
+
+#smart a{
+  color:#db940d;
+  font-size:0.8em;
+}
+#smart a:hover, #smart a:active {
+  font-size: 0.81em;  
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++ Banner ++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -757,8 +765,8 @@ img.hover-shadow {
 }
 
 #publicaciones .img-post{
-  width: 150px;
-  height: 100px;
+  width: 100%;
+  height: 10em;
   float: left;
   margin: 7px 7px 7px 0px;
   padding: 5px;
@@ -893,19 +901,26 @@ form{
    width: 80%;
    margin: auto;
 }
-
-@media only screen and (max-height:450px) {
+#img_blog {
+  width: 100%;
+  height: 15em;
+}
+@media only screen and (max-width:991px) {
   #img_blog {
-    width:70%;
-    margin: auto;
+    width: 100%;
+    height: 20em;
   }
 }
-
 @media only screen and (max-width:450px) {
   .col_blog_recientes {
    width: 100%;
   }
+  #img_blog {
+    width: 100%;
+    height: 15em;
+  }
 }
+
 
 #publicacion{
   width: 70%;
@@ -924,7 +939,15 @@ form{
   font-family: 'calibri-light';
   border-radius: 10px;
 }
-
+#img_post {
+  width: 100%;
+  height: 20em;
+}
+@media only screen and (max-width:450px) {
+  #img_post {
+    height: 10em;
+  }
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++++ NOSOTROS +++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/

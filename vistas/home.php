@@ -159,9 +159,15 @@ include_once "plantillas/encabezado.inc.php";
 <br>
 
 <!-- BLOG -->
-<?php
-include_once "plantillas/home-blog.inc.php";
-?>
+<div class="container-fluid" id="blog" style="background-color:#470f11; color:white;">
+    <h2 style="padding-left: 0.6em;">Blog</h2>
+    <p style="font-size:1.3em;padding-left:1.1em;padding-right:1.1em;">
+        Vea nuestros últimos artículos relacionados al vino
+    </p>
+    <?php
+    include_once "plantillas/home-blog.inc.php";
+    ?>
+</div>
 <!-- FIN DE BLOG -->
 
 <!-- Pie de pagina -->

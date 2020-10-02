@@ -6,7 +6,7 @@ session_start();
 
 $varsesion = $_SESSION['usuario'];
 
-if ($varsesion == null || $varsesion = '' || $varsesion !== NOMBRE_USER) {
+if ($varsesion == NULL || $varsesion = '' || $varsesion !== NOMBRE_USER) {
     echo "Usted no tiene autorización";
     die();
 }
@@ -35,8 +35,16 @@ if ($tabla !== "tabla_blog") {
 	$presentacion = $_POST['presentacion'];
 	$texto1 = $_POST['texto1'];
 	$img1 = addslashes(file_get_contents($_FILES['img1']['tmp_name']));
-	$texto2 = $_POST['texto2'];
-	$img2 = addslashes(file_get_contents($_FILES['img2']['tmp_name']));
+	$texto2 = NULL;
+	$img2 = NULL;
+
+	if ($_POST['texto2']) {
+		$texto2 = $_POST['texto2'];
+	}
+	if ($_FILES['img2']['tmp_name']) {
+		$img2 = addslashes(file_get_contents($_FILES['img2']['tmp_name']));
+	}
+  	
 
 	$aux1 = "(fecha,autor,categoria,titulo,img_presentacion,presentacion,texto1,img1,texto2,img2)";
 	$aux2 = "(NOW(),'$autor','$categoria','$titulo','$img_presentacion','$presentacion','$texto1','$img1','$texto2','$img2')";
@@ -53,5 +61,22 @@ if ($resultado) {
 	include_once("plantillas/admin-navegador.inc.php");
 	echo '<br>';
 	echo '<h3 style="text-align: center">ERROR: No se subio</h3>';
+
+?>
+<ul>
+<?php
+	if (round(intval($_FILES["img_presentacion"]["size"])/1048576, 2) > 2){
+		echo('<li>El archivo img_presentacion no puede superar los 2 MB.</li>');
+	}
+
+	if (round(intval($_FILES["img1"]["size"])/1048576, 2) > 2){
+		echo('<li>El archivo img1 no puede superar los 2 MB.</li>');
+	}
+	if (round(intval($_FILES["img2"]["size"])/1048576, 2) > 2){
+		echo('<li>El archivo img2 no puede superar los 2 MB.</li>');
+	}
+?>
+</ul>
+<?php
 	include_once "plantillas/documento-cierre.inc.php";
 }
