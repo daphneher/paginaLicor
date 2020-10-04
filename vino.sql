@@ -45,9 +45,9 @@ CREATE TABLE tabla_blog (
 	titulo VARCHAR(150) NOT NULL,
 	img_presentacion LONGBLOB NOT NULL,
 	presentacion VARCHAR(250) NOT NULL,
-	texto1 VARCHAR(32766) NOT NULL,
+	texto1 MEDIUMTEXT NOT NULL,
 	img1 LONGBLOB NOT NULL,
-	texto2 VARCHAR(32766),
+	texto2 MEDIUMTEXT,
 	img2 LONGBLOB,
 	PRIMARY KEY(id)
 );

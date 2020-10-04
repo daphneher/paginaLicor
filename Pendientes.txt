@@ -1,9 +1,4 @@
 *************************************************
-	blogs/plantilla-de-blog.inc.php (brian)
-
-1. Que funcione boton Buscar
-2. Que funcione filtro por categoria
-*************************************************
 	blogs/blog.php (brian)
 
 1. Avanzar y retroceder
@@ -48,4 +43,3 @@ tienda, nosotros, blog, contacto
 
 1. la imagen titulo sacarlar
 2. agregar la seccion de imagenes cambiantes y a su izquierda agregar logo.
-

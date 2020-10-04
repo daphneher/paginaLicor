@@ -93,7 +93,7 @@ if ($tabla != "tabla_blog") {
 
 					    <h4 style="text-align:left;">Texto 1:</h4> 
 						<p>
-					    	<textarea style="color:black; background-color:#ffffff;max-width: min-content;" placeholder="Máximo 31500 caracteres..." name="texto1" rows="4" cols="70" maxlength="31500" required></textarea>
+					    	<textarea style="color:black; background-color:#ffffff;max-width: min-content;" placeholder="" name="texto1" rows="4" cols="70" maxlength="167000000" required></textarea>
 					    </p>
 					    <br><br>
 
@@ -103,7 +103,7 @@ if ($tabla != "tabla_blog") {
 
 						<h4 style="text-align:left;">Texto 2 (opcional):</h4> 
 						<p>
-					    	<textarea style="color:black; background-color:#ffffff;max-width: min-content;" placeholder="Máximo 31500 caracteres..." name="texto2" rows="4" cols="70" maxlength="31500"></textarea>
+					    	<textarea style="color:black; background-color:#ffffff;max-width: min-content;" placeholder="" name="texto2" rows="4" cols="70" maxlength="167000000"></textarea>
 					    </p>
 					    <br><br>
 
