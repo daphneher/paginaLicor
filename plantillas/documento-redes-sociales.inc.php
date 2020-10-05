@@ -4,9 +4,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Add font awesome icons -->
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-instagram fap-instagram"></a>
-    <a href="#" class="fa fa-youtube"></a>
+    <a href="https://www.google.com" target="_blank">
+        <i class="fa fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/ideasdelvino/?hl=es-la" target="_blank">
+        <i class="fa fa-instagram fap-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/Ideasdelvino-100790058384003" target="_blank">
+        <i class="fa fa-youtube"></i>
+    </a>
     
     <br><br>
 
