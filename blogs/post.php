@@ -11,7 +11,7 @@ $titulo = $row['titulo'];
 include_once "plantillas/documento-apertura.inc.php";
 include_once "plantillas/encabezado.inc.php";
 ?>
-<br>
+<div id="fondo-post">
 <section id="principal">
     <section id="publicaciones">
         <article class="post">
@@ -57,7 +57,9 @@ include_once "plantillas/encabezado.inc.php";
     <?php
     include_once "blogs/panel-derecho-blog.inc.php";
     ?>
-</section>
+</section>    
+</div>
+
 
 <!-- Redes Sociales -->
 <?php

@@ -1,7 +1,7 @@
-<section id="sidebar" class="hide-mobile">
+<section id="sidebar" class="hide-mobile panel-derecho-blog">
 
   <!-- BUSQUEDA -->
-  <section id="buscar">
+  <section id="buscar" class="buscar-ordenador">
     <h2 class="encabezado-sidebar">
       <i style="font-size:0.8em;" class="fa fa-search" aria-hidden="true"></i> Buscar
     </h2>
@@ -25,7 +25,7 @@
     </form>
   </section>
   <!-- BUSQUEDA -->
-
+  <br>
   <!-- FILTRO POR CATEGORIA -->
   <section id="categorias">
     <h2 class="encabezado-sidebar">Categorias</h2>
@@ -49,7 +49,7 @@
     </a>
   </section>
   <!-- FILTRO POR CATEGORIA -->
-
+  <br>
   <!-- ULTIMOS ARTICULOS -->
   <section id="ultimos-post">
     <h2 class="encabezado-sidebar">Últimos Artículos</h2>
@@ -59,7 +59,29 @@
     $resultado = $conexion->query($query);
     while($cont_publicaciones != 4 and $row = $resultado->fetch_assoc()){
     ?>
-    <a href="#" class="enlace-sidebar">
+    <a href="<?php echo POST."?id=".$row['id'] ?>" class="enlace-sidebar">
+      <h2><?php echo $row['titulo']; ?></h2>
+      <p><?php echo $row['presentacion']; ?></p>
+    </a>
+    <?php
+      $cont_publicaciones++;
+    }
+    ?>
+  </section>
+  <!-- ULTIMOS ARTICULOS -->
+</section>
+
+<section id="sidebar" class="hide-mobile panel-derecho-blog ultimos-articulos-movil">
+  <!-- ULTIMOS ARTICULOS -->
+  <section id="ultimos-post">
+    <h2 class="encabezado-sidebar">Últimos Artículos</h2>
+    <?php
+    $cont_publicaciones = 0;
+    $query = "SELECT * FROM tabla_blog ORDER BY fecha DESC";
+    $resultado = $conexion->query($query);
+    while($cont_publicaciones != 4 and $row = $resultado->fetch_assoc()){
+    ?>
+    <a href="<?php echo POST."?id=".$row['id'] ?>" class="enlace-sidebar">
       <h2><?php echo $row['titulo']; ?></h2>
       <p><?php echo $row['presentacion']; ?></p>
     </a>

@@ -4,7 +4,7 @@ html {
 
 body {
   overflow-x: hidden !important;
- 	background-color: white;        
+  background-color: white;        
 }
 body, html {
   height: 100%;
@@ -144,6 +144,11 @@ p, h1, h2, h3 {
   color: #efb810c7; 
   font-size:20px;
 }
+
+#btnSubmenu:hover {
+  background-color:#585656bf;
+}
+
 
 .overlay {
   height: 100%;
@@ -794,10 +799,11 @@ img.hover-shadow {
 /*+++++++++++++++++++++++++++ BLOG +++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #principal{
-  width: 80%;
+  width: 90%;
   height: auto;
   overflow: hidden;
   margin: auto;
+
 }
 
 #publicaciones{
@@ -809,10 +815,6 @@ img.hover-shadow {
 }
 
 @media only screen and (max-width: 480px) {
-  #principal{
-    width: 90%;
-  }
-
   #publicaciones{
     width: 100%;
   }
@@ -840,6 +842,7 @@ img.hover-shadow {
   color: #6e6e6e;
   font-size: 22px;
   font-family: 'calibri-light';
+  text-align: justify;
 }
 
 #publicaciones a .titulo-post:hover{
@@ -871,6 +874,10 @@ img.hover-shadow {
   border-radius: 5px;
 }
 
+#publicaciones .leer-mas:hover {
+  background: #6e0805;
+}
+
 #sidebar{
   float: right;
   width: 28%;
@@ -887,9 +894,6 @@ img.hover-shadow {
   width: 100%;
   overflow: hidden;
   height: auto;
-  margin-bottom: 20px;
-  margin-left: 4px;
-  margin-bottom: 4px;
 }
 
 form{
@@ -900,11 +904,9 @@ form{
   border: 1px solid #ccc;
   box-shadow: 0px 0px 5px #ccc inset;
   padding: 10px 4px;
-  border-radius: 10px;
-  width: 80%;
+  width: 90%;
   margin-left: 4px;
   margin-bottom: 4px;
-
 }
 
 #buscar .boton{
@@ -920,32 +922,16 @@ form{
 }
 
 .encabezado-sidebar{
-  /* width: 100%; */
-  /* height: 35px; */
-  background-color: #970601;
   text-align: center;
   color: #fff;
   font-family: 'calibri-light';
   border-radius: 0.2em;
   padding: 0.18em;
-}
-
-@media only screen and (max-width: 480px) {
-  .encabezado-sidebar{
-    font-size: 20px;
-    display: block;
-    height: 25px;
-    width: 100%;
-    border-radius: 0.2em;
-  }
-
-  #buscar .boton{
-    padding: 5px;
-  }
-
-  #buscar input[type="text"]{
-    width: 50%;
-  }
+  margin: auto;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  background: rgb(86,10,10);
+  background: linear-gradient(90deg, rgba(86,10,10,1) 0%, rgba(197,8,8,1) 43%, rgba(232,40,40,1) 56%, rgba(162,0,0,1) 99%);
 }
 
 .enlace-sidebar{
@@ -1061,6 +1047,70 @@ form{
 #volver-a-blog:hover {
   background-color: #680704;
 }
+
+.panel-derecho-blog {
+  width: 30% !important;
+}
+
+.buscar-movil {
+  display: none;
+}
+
+.ultimos-articulos-movil {
+  display: none;
+}
+#categorias a, #ultimos-post a {
+  color: #e7e7fc !important;
+}
+
+#categorias a:hover, #categorias a:active, #ultimos-post a:hover, #ultimos-post a:active  {
+  color: #383636 !important;
+}
+@media only screen and (max-width:990px) { 
+  .img-post {
+    height: 15em !important;
+  }
+}
+
+@media only screen and (max-width:900px) { 
+  .encabezado-sidebar{
+    font-size: 1.8em;
+  }
+  #buscar .boton {
+    font-size: 0.9em;
+  }
+  #ultimos-post .enlace-sidebar h2 {
+    font-size: 1.8em;
+  }
+  #principal {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .panel-derecho-blog {
+    display: none;
+    width: 100% !important;
+  }
+
+  .encabezado-sidebar{
+    font-size: 1.8em;
+  }
+
+  .ultimos-articulos-movil {
+    display: block !important;
+  }
+  .buscar-movil {
+    display: block;
+  }
+}
+
+#fondo-post {
+  background-image: url(../img/fondo-post.jpg);
+   padding-bottom: 1em; 
+   padding-top: 1em;
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++++ NOSOTROS +++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1089,7 +1139,6 @@ form{
 #nosotros h2 {
   font-size: 3em;
   color: white;
-  
 }
 
 #nosotros p {

@@ -10,15 +10,17 @@ $titulo = "Blogs";
 include_once "plantillas/documento-apertura.inc.php";
 include_once "plantillas/encabezado.inc.php";
 ?>
+<div id="fondo-post">
 <section id="principal">
-  <?php
+  	<?php
+  	include_once "blogs/buscar-movil.inc.php";
 
-  include_once "blogs/ver-articulos.inc.php";
+	include_once "blogs/ver-articulos.inc.php";
 
-  include_once "blogs/panel-derecho-blog.inc.php";
-  ?>
+	include_once "blogs/panel-derecho-blog.inc.php";
+	?>		
 </section>
-
+</div>
 <!-- Redes Sociales -->
 <?php
 include_once "plantillas/documento-redes-sociales.inc.php";

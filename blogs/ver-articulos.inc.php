@@ -1,12 +1,14 @@
 <br>
 <section id="publicaciones">
-  <?php    
+  <?php  
+  $filtro_categoria = false;  
   // SI LE DIERON A BUSCAR CON TEXTO ESCRITO
   if (isset($_POST['ok']) and !empty($buscar)) {
     $buscador = '%'.$buscar.'%';
     $buscar_en = "titulo LIKE '$buscador' 
     OR categoria LIKE '$buscador' 
     OR presentacion LIKE '$buscador' 
+    OR autor LIKE '$buscador'
     ORDER BY fecha DESC LIMIT 10";
 
     $query = "SELECT * FROM `tabla_blog` WHERE ".$buscar_en;
@@ -16,6 +18,7 @@
     $categoria = $_REQUEST['categoria'];
     $buscador = '%'.$categoria.'%';
     $query = "SELECT * FROM `tabla_blog` WHERE categoria LIKE '$buscador' ORDER BY fecha DESC";
+    $filtro_categoria = true;
 
   } else {
     $query = "SELECT * FROM tabla_blog";
@@ -71,7 +74,7 @@
   </article>
   <?php      
   }
-  if (!$hay_resultado) {
+  if (!$hay_resultado and !$filtro_categoria) {
   ?>
   <article class="post">
     <h2 class="titulo-post">No hay artículos que coincidan con tu búsqueda.</h2>
@@ -85,11 +88,26 @@
       <a type="button" id="volver-a-blog" class="btn btn-default" href="<?php echo BLOG; ?>">
         Volver
       </a>
-    </center>
-    
+    </center>    
   </article>
   <?php
-  } else {
+  } else if ((!$hay_resultado and $filtro_categoria)) {
+  ?>
+  <article class="post">
+    <h2 class="titulo-post">
+      Actualmente no hay artículos en la siguiente categoría:
+      <b><?php echo $_REQUEST['categoria']; ?></b>.
+    </h2>
+    <br>
+    <center>
+      <a type="button" id="volver-a-blog" class="btn btn-default" href="<?php echo BLOG; ?>">
+        Volver
+      </a>
+    </center>    
+  </article>
+  <?php
+  } 
+  else {
   ?>
     <!-- REVISAR - PAGINACION SIN NINGUN FUNCIONAMIENTO -->
     <div id="paginacion">
@@ -102,6 +120,7 @@
   <?php
   }
   ?> 
+
 </section>
 
 
