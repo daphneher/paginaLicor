@@ -6,68 +6,35 @@ $titulo = "Vinos - Home";
 include_once "plantillas/documento-apertura.inc.php";
 include_once "plantillas/encabezado.inc.php";
 ?>
-
-<!-- Banner -->
-<div class="slideshow-container" id="banner">
-    <?php                
-    $query = "SELECT * FROM ".TABLA_BANNER;
-    $resultado = $conexion->query($query);
-    while($row = $resultado->fetch_assoc()){
-    ?>
-        <div class="mySlides fade">
-          <!-- Extraer img de db -->
-          <img class="imagenes_banner" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-sm-3">
+            <img class="img-responsive "  style="margin:auto;vertical-align:middle;" src="<?php echo RUTA_IMG ?>logo.png">
         </div>
-    <?php
-    }
-    ?>
+        <div class="col-md-9 col-sm-9">
+            <!-- Banner -->
+            <div class="slideshow-container" id="banner">
+                <?php                
+                $query = "SELECT * FROM ".TABLA_BANNER;
+                $resultado = $conexion->query($query);
+                while($row = $resultado->fetch_assoc()){
+                ?>
+                    <div class="mySlides fade">
+                      <!-- Extraer img de db -->
+                      <img class="imagenes_banner" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">
+                    </div>
+                <?php
+                }
+                ?>
 
-    <i class="fa fa-angle-right fa-2x next" aria-hidden="true" onclick="plusSlides(1)"></i>
-    <i class="fa fa-angle-left fa-2x prev" aria-hidden="true" onclick="plusSlides(-1)"></i>
+                <i class="fa fa-angle-right fa-2x next" aria-hidden="true" onclick="plusSlides(1)"></i>
+                <i class="fa fa-angle-left fa-2x prev" aria-hidden="true" onclick="plusSlides(-1)"></i>
+            </div>
+            <!-- Fin Banner -->
+        </div>
+    </div>
 </div>
-<!-- Fin Banner -->
 
-<!-- Nosotros -->
-<div style="background-image: url('img/fondo-nosotros.jpg');">
-    <div class="container-fluid contenedor-nosotros">
-        <div id="nosotros">
-            <img src="<?php echo RUTA_IMG; ?>Nosotros.png" style="opacity: 0.4; width: 100%;">
-            
-            <div id="texto-encima">
-                <div id="titulo-nosotros">
-                    <h2 style="margin-bottom: 0em; text-align: center;">Nosotros</h2>
-                    <img class="img-responsive" src="<?php echo RUTA_IMG; ?>separador.png">
-                </div>
-                <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                
-            </div>    
-        </div>    
-    </div>  
-</div>
-<!-- Fin Nosotros -->
 
 <!-- Nuestros Vinos -->
 <div class="container" id="nuestros-vinos">
@@ -141,6 +108,39 @@ include_once "plantillas/encabezado.inc.php";
 </div>   
 <!-- Fin Nuestros Vinos -->
 
+<!-- Nosotros -->
+<div style="background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.9)),url('img/fondo-nosotros.jpg');">
+    <div id="nosotros" class=" parallax">
+                <div id="titulo-nosotros" style="overflow: auto;">
+                    <h2 style="margin-bottom: 0em; text-align: center;">Nosotros</h2>
+                    <img class="img-responsive" src="<?php echo RUTA_IMG; ?>separador.png">
+                </div>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+           
+    </div>  
+</div>
+<!-- Fin Nosotros -->
+
+
 <div class="container" id="contacto" >
     <h2>Contacto</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -169,7 +169,6 @@ include_once "plantillas/encabezado.inc.php";
     ?>
 </div>
 <!-- FIN DE BLOG -->
-
 <!-- Redes Sociales -->
 <?php
 include_once "plantillas/documento-redes-sociales.inc.php";

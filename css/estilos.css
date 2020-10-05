@@ -4,7 +4,7 @@ html {
 
 body {
   overflow-x: hidden !important;
-  background-color: white;        
+ 	background-color: white;        
 }
 body, html {
   height: 100%;
@@ -105,8 +105,14 @@ p, h1, h2, h3 {
     height:15em;
   }
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-/*++++++++++++++++++++++++ BotÃ³n MenÃº ++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++ Botón Menú ++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .btnMenu {
   font-size: 30px;
@@ -115,7 +121,7 @@ p, h1, h2, h3 {
   top: 1.4em;
   background-color: #10101085;
   padding-left: 0.4em;
-  padding-right: 0.4em;
+  padding-right: 2em;
   padding-top:0.2em;
   color: #efb810c7;
   left: 0.1em;
@@ -234,7 +240,7 @@ p, h1, h2, h3 {
   padding-right: 2em;
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-/*+++++++++++++++++++++++++ BotÃ³n Wsp ++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++ Botón Wsp ++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .fa-whatsapp {
   background-color: #0ad561;
@@ -259,6 +265,64 @@ p, h1, h2, h3 {
   .fa-whatsapp {
     top:80%;    
   }
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++Botones de pie de pagina+++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+.fa-facebook {
+  
+  font-size: 3em !important;
+  padding: 0.2em;
+  text-align: center;
+  text-decoration: none;
+  border-radius:50%;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+  background: #3B5998;
+  color: white;
+}
+
+.fa-facebook:hover, .fa-facebook:active {
+  font-size: 2.8em !important;
+  color:white;
+  
+}
+
+.fap-instagram {
+  padding: 10px;
+  font-size: 3em !important;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5em;
+  background: rgb(120,8,199);
+  background: linear-gradient(90deg, rgba(120,8,199,1) 0%, rgba(121,9,36,1) 51%, rgba(255,154,0,1) 100%);
+  color: white;
+}
+
+.fa-instagram:hover, .fa-instagram:active {
+  font-size: 2.8em !important;
+  color:white;
+  
+}
+
+.fa-youtube {
+  padding: 0.6em;
+  font-size: 2em !important;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5em;
+  background: rgb(199,11,8);
+  background: linear-gradient(90deg, rgba(199,11,8,1) 0%, rgba(121,9,17,1) 51%, rgba(93,5,2,1) 100%);
+  color: white;
+}
+
+.fa-youtube:hover, .fa-youtube:active {
+  font-size: 2.8em !important;
+  color:white;
+  
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -506,13 +570,14 @@ input[type=text]:focus, input[type=password]:focus {
 
 
 #descripcion-texto p, #descripcion-texto h1 {
-  font-family:didot,serif,helvÃ©tica;
+  font-family:didot,serif,helvética;
   
 }
 @media only screen and (max-width: 767px) {
   #img-descripcion {
     width:100%;
     height:15em;
+    border-radius: 5px;
   }
 }
 
@@ -780,7 +845,7 @@ img.hover-shadow {
 }
 
 #publicaciones .leer-mas{
-  background: #970601;
+  background: #6e0805;
   color: #fff;
   padding: 5px;
   border: 0px;
@@ -789,24 +854,25 @@ img.hover-shadow {
   border-radius: 5px;
 }
 
-#publicaciones .leer-mas:hover {
-  background: #6e0805;
-}
-
 #sidebar{
   float: right;
   width: 28%;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #ccc inset;
+  padding: 10px 4px;
   height: auto;
   overflow: hidden;
   margin-top: 10px;
 }
 
 #buscar, #categorias, #ultimos-post{
-  border-radius: 10px;
+  border-radius: 0.1em;
   width: 100%;
   overflow: hidden;
   height: auto;
   margin-bottom: 20px;
+  margin-left: 4px;
+  margin-bottom: 4px;
 }
 
 form{
@@ -817,8 +883,8 @@ form{
   border: 1px solid #ccc;
   box-shadow: 0px 0px 5px #ccc inset;
   padding: 10px 4px;
-  border-radius: 0.1em;
-  width: 100%;
+  border-radius: 10px;
+  width: 80%;
   margin-left: 4px;
   margin-bottom: 4px;
 
@@ -846,9 +912,11 @@ form{
   border-radius: 0.2em;
   padding: 0.18em;
 }
+
 @media only screen and (max-width: 480px) {
   .encabezado-sidebar{
     font-size: 20px;
+    display: block;
     height: 25px;
     width: 100%;
     border-radius: 0.2em;
@@ -881,20 +949,11 @@ form{
     display: block;
   }
   .hide-mobile {
-    display: block;
-    width: 100% !important;
+    display: none;
   }
 }
 
-@media only screen and (max-width:991px) {
-  #publicaciones {
-    width: 100%;
-  }
-  
-  .post {
-    width: 100%;
-    padding: 1em;
-  }
+ @media only screen and (min-device-width: 481px) {
   .show-mobile {
     display: none;
   }
@@ -904,6 +963,16 @@ form{
   }
 }
 
++@media only screen and (max-width:991px) {
+  #publicaciones {
+    width: 100%;
+  }
+  
+  .post {
+    width: 100%;
+    padding: 1em;
+  }
+}
 /* Blog en Home.php */
 .img_blog_zoom {
   transition: transform .2s;
@@ -997,11 +1066,13 @@ form{
 
 #nosotros h2, #nosotros p {
   font-family:"Times New Roman",Times,serif;
+  overflow: auto;
 }
 
 #nosotros h2 {
   font-size: 3em;
   color: white;
+  
 }
 
 #nosotros p {
@@ -1040,15 +1111,31 @@ form{
   font-size: 2.5em;
   }
 }
+
+.parallax {
+  /* The image used */
+  background-image: url("../img/nosotros.png");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #encabezado {
-  background-color:#F7D366;
+  background-color:#000000;
 }
 
 #iconoe {
-  color:#310305;
+  color:#ffffff;
   margin: 5px;
 }
 
@@ -1062,6 +1149,6 @@ form{
     font-size: 15px;
   }
   .fa-instagram, .fa-facebook-official, .fa-youtube-play, .fa-envelope-o {
-    font-size: 1.5em !important;
+    font-size: 1.5em;
   }
 }
