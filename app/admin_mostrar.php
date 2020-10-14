@@ -25,56 +25,58 @@ $tabla = $_REQUEST['tabla'];
 <div class="container">
 	<h2>
 		<a href="<?php echo ADMIN_SUBIR."?tabla=".$tabla; ?>">
-			<i class="fa fa-plus" aria-hidden="true"></i> Agregar una nueva imagen
+			<i class="fa fa-plus" aria-hidden="true"></i> Agregar nuevo
 		</a>
 	</h2>
+
 	<br><br>
 
-	<div class="row">
-	<?php 
-		$tabla = $_REQUEST['tabla'];
-		$query = "SELECT * FROM ". $tabla;
+	<div class="row" style="text-align: left;">
+		<?php 
+		$contador_col = 0;
+		if ($tabla == TABLA_PRODUCTOS) {
+			$query = "SELECT * FROM ".$tabla." ORDER BY prioridad ASC";
+		} else {
+			$query = "SELECT * FROM ".$tabla." ORDER BY id DESC";
+		}
 		$resultado = $conexion->query($query);
 		while ($row = $resultado->fetch_assoc()) {
-	?>
-		<div class="col-md-4">
-			<center id="col-img-banner">
-				<p style="text-align: center;"><b>Nombre: <?php echo $row['nombre']; ?></b></p>
-			
-				<img id="img-banner" class="img-responsive img-thumbnail"
-				src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']);?>">	
-				<br>
-				<?php
-				if ($tabla !== TABLA_BANNER) {
-				
-				?>
-					<br><br>
-					<p style="text-align: justify;">Descripción: 
-						<textarea style="background-color: white;;max-width: min-content;" name="descripcion" rows="4" cols="30" maxlength="250" required><?php echo $row['descripcion']; ?>
-						</textarea>		
-					</p>
-					<br>
-					<p style="text-align: justify;">Precio: <?php echo $row['precio']; ?></p>
-				<?php
-				}
-				?>
-				<br>
-				<a style="padding:1em;" href="<?php echo ADMIN_MODIFICAR."?id=".$row['id']."&tabla=".$tabla; ?>">
-					<i class="fa fa-refresh" aria-hidden="true"></i> Modificar
-				</a>
-				<br><br>
-				<a style="padding:1em;" href="<?php echo ADMIN_ELIMINAR."?id=".$row['id']."&tabla=".$tabla; ?>">
-					<i class="fa fa-times" aria-hidden="true"></i> Eliminar
-				</a>						
-			</center>			
-		</div>
+			$contador_col++;
 
-	<?php
-	}
-	?>			
+			switch ($tabla) {
+
+				case TABLA_BANNER:
+					include "plantillas/admin-mostrar-banner.inc.php";
+					break;	
+
+				case TABLA_PRODUCTOS:
+					include "plantillas/admin-mostrar-productos.inc.php";
+					break;
+
+				case TABLA_BLOG:
+					include "plantillas/admin-mostrar-blog.inc.php";
+					break;			
+			}
+
+			if ($contador_col == 2 && $tabla !== TABLA_PRODUCTOS) {
+				$contador_col = 0;
+			?>
+			</div>
+			<div class="row" style="text-align: left;">
+			<?php
+			}
+
+			if ($contador_col == 4 && $tabla == TABLA_PRODUCTOS) {
+				$contador_col = 0;
+			?>
+			</div>
+			<div class="row">
+			<?php
+			}
+		}
+		?>
 	</div>
 </div>
-
 <?php
-include_once "plantillas/documento-cierre.inc.php";
+include_once "plantillas/documento-cierre-bis.inc.php";
 ?>		

@@ -31,9 +31,9 @@ include_once "plantillas/encabezado.inc.php";
             </p>
             <img id="img_post" src="data:image/jpg;base64,<?php echo base64_encode($row['img1']);?>">
             <br>
-            <p class="parrafo-post" style="padding-top: 1em;">
+            <div class="parrafo-post">
               <?php echo $row['texto1']; ?>
-            </p>
+            </div>
 
             <?php 
             if ($row['img2']) {
@@ -46,9 +46,9 @@ include_once "plantillas/encabezado.inc.php";
             <?php 
             if ($row['texto2']) {
             ?> 
-            <p class="parrafo-post" style="padding-top: 1em;">
-              <?php echo $row['texto1']; ?>
-            </p>
+            <div class="parrafo-post">
+              <?php echo $row['texto2']; ?>
+            </div>
             <?php
             }
             ?>

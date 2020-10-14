@@ -49,6 +49,5 @@ if (isset($_POST['login'])) {
 	
 <?php
 }
-
-include_once "plantillas/documento-cierre.inc.php";
+include_once "plantillas/documento-cierre-bis.inc.php";
 ?>

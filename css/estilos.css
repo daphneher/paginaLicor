@@ -525,13 +525,22 @@ input[type=text]:focus, input[type=password]:focus {
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-/*+++++++++++++++++++++++ Admin Mostrar ++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++ Admin ++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #img-banner {
-  height: 12em;
-  margin: auto;
+  height: 15em;
+  width: 70%;
   border-radius: 5px;
 }
+
+#textarea_admin {
+  background-color: white;
+  resize: vertical;
+  min-height: 8em;
+  max-height: 15em;
+  width: 100%;
+}
+
 #col-img-banner {
   background-color: #7f7f7f;
   margin:1em;
@@ -545,6 +554,41 @@ input[type=text]:focus, input[type=password]:focus {
 #col-img-banner p {
   font-size: 1.4em;
   color:black;
+}
+
+.img-admin-produc {
+  height: 15em;
+  width: 70%;
+  border-radius: 5px;
+}
+
+#admin-modificar-banner {
+  background-color:#7f7f7f; 
+  color:black; padding:1em; 
+  width:50%; 
+  margin:auto;
+}
+
+@media screen and (max-width: 450px) {
+
+  #admin-modificar-banner {
+    width: 100%;
+  }
+  
+  .img-admin-produc {
+    height: 20em !important;
+    width: 70% !important;
+  }
+  
+}
+
+@media screen and (max-width: 991px) {
+
+  .img-admin-produc {
+    height: 20em;
+    width: 30%;
+  }
+  
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -828,10 +872,18 @@ img.hover-shadow {
   background-color: #fdfdfd;
   border-left-style: solid;
   border-left-width: 5px;
-  border-left-color: #994C4A;
+  border-left-color: #6e0805;
   border-radius: 10px;
   box-shadow: 0px 0px 15px #ccc; 
   margin-bottom: 25px;
+}
+
+.parrafo-post {
+  padding-top:1em;
+  padding-left:0.5em;
+  padding-right:0.5em;
+  font-family: Open Sans;
+  text-align: left;
 }
 
 .enlace-post{
@@ -875,7 +927,7 @@ img.hover-shadow {
 }
 
 #publicaciones .leer-mas:hover {
-  background: #6e0805;
+  background: #980c07;
 }
 
 #sidebar{

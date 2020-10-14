@@ -10,30 +10,16 @@ CREATE TABLE tabla_banner (
 	PRIMARY KEY(id)
 );
 
-CREATE TABLE tabla_vino_tinto (
+CREATE TABLE tabla_productos (
 	id INT NOT NULL UNIQUE AUTO_INCREMENT,
-	nombre VARCHAR(50) NOT NULL,
+	nombre VARCHAR(100) NOT NULL,
 	imagen LONGBLOB NOT NULL,
-	descripcion VARCHAR(500) NOT NULL,
-	precio VARCHAR(20) NOT NULL,
-	PRIMARY KEY(id)
-);
-
-CREATE TABLE tabla_vino_blanco (
-	id INT NOT NULL UNIQUE AUTO_INCREMENT,
-	nombre VARCHAR(50) NOT NULL,
-	imagen LONGBLOB NOT NULL,
-	descripcion VARCHAR(500) NOT NULL,
-	precio VARCHAR(20) NOT NULL,
-	PRIMARY KEY(id)
-);
-
-CREATE TABLE tabla_vino_rosa (
-	id INT NOT NULL UNIQUE AUTO_INCREMENT,
-	nombre VARCHAR(50) NOT NULL,
-	imagen LONGBLOB NOT NULL,
-	descripcion VARCHAR(500) NOT NULL,
-	precio VARCHAR(20) NOT NULL,
+	precio VARCHAR(50) NOT NULL,
+	descripcion VARCHAR(255) NOT NULL,
+	categoria VARCHAR(50) NOT NULL,
+	pais VARCHAR(50) NOT NULL,
+	cepa VARCHAR(50) NOT NULL,
+	prioridad INT NOT NULL,
 	PRIMARY KEY(id)
 );
 

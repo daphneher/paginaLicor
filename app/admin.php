@@ -13,19 +13,18 @@ if ($varsesion == null || $varsesion = '' || $varsesion !== NOMBRE_USER) {
 
 include_once "app/config.inc.php";
 include_once "app/conexion.inc.php";
-?>
 
-<?php
 $titulo = "Administrador General";
+
 include_once("plantillas/documento-apertura.inc.php");
 include_once("plantillas/admin-navegador.inc.php");
 ?>
 
 <div class="container"  style="text-align:center; background-image:url('img/fondo-admin.jpg');">
-    <h2><b>Seleccione la tabla de imágenes que desea administrar</b></h2>
+    <h2><b>Seleccione la tabla que desea administrar</b></h2>
     <br>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div id="jumbotrom-admin" class="jumbotrom">
                 <h3><b>Tabla Banner</b></h3>
                 <hr id="separador-admin">
@@ -38,54 +37,28 @@ include_once("plantillas/admin-navegador.inc.php");
                 </a>
             </div>            
         </div>  
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div id="jumbotrom-admin" class="jumbotrom">
-                <h3><b>Tabla Vino Tinto</b></h3>
+                <h3><b>Tabla Productos</b></h3>
                 <hr id="separador-admin">
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_VINO_TINTO; ?>" >
-                    Subir Nueva Imagen
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_PRODUCTOS; ?>" >
+                    Subir Nuevo Producto
                 </a>
                 <br><br>
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_VINO_TINTO; ?>">
-                    Ver tabla
-                </a>
-            </div>            
-        </div> 
-        <div class="col-md-3">
-            <div id="jumbotrom-admin" class="jumbotrom">
-                <h3><b>Tabla Vino Blanco</b></h3>
-                <hr id="separador-admin">
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_VINO_BLANCO; ?>" >
-                    Subir Nueva Imagen
-                </a>
-                <br><br>
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_VINO_BLANCO; ?>">
-                    Ver tabla
-                </a>
-            </div>            
-        </div> 
-        <div class="col-md-3">
-            <div id="jumbotrom-admin" class="jumbotrom">
-                <h3><b>Tabla Vino Rosa</b></h3>
-                <hr id="separador-admin">
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_VINO_ROSA; ?>" >
-                    Subir Nueva Imagen
-                </a>
-                <br><br>
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_VINO_ROSA; ?>">
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_PRODUCTOS; ?>">
                     Ver tabla
                 </a>
             </div>            
         </div>     
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div id="jumbotrom-admin" class="jumbotrom">
                 <h3><b>Tabla Blog</b></h3>
                 <hr id="separador-admin">
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=tabla_blog"; ?>" >
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_SUBIR."?tabla=".TABLA_BLOG; ?>" >
                     Subir Nuevo Post
                 </a>
                 <br><br>
-                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=tabla_blog"; ?>">
+                <a type="button" class="btn btn-primary" href="<?php echo ADMIN_MOSTRAR."?tabla=".TABLA_BLOG; ?>">
                     Ver tabla
                 </a>
             </div>            
@@ -94,7 +67,6 @@ include_once("plantillas/admin-navegador.inc.php");
     <br><br>
 </div>
 
-        <script src="<?php echo RUTA_JS ?>jquery.min.js"></script>
-        <script src="<?php echo RUTA_JS ?>bootstrap.min.js"></script> 
-    </body>
-</html>
+<?php
+include_once "plantillas/documento-cierre-bis.inc.php"
+?>

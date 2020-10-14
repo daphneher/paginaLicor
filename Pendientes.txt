@@ -7,10 +7,6 @@
 
 1. corregir alineacion de articulos
 *************************************************
-	blogs/post.php (brian)
-
-1. cambiar estilo para ser mas atractivo
-*************************************************
 	todas los archivos de la carpeta app
 
 1. corregir logistica
