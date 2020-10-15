@@ -64,7 +64,12 @@ include_once "plantillas/encabezado.inc.php";
         </div>
     </div>
 
-    <br>   
+    <br> 
+    <?php
+    include_once "plantillas/home-tienda.inc.php";
+    ?>
+    <br>
+
 
     <button class="accordion">Vino Tinto</button>
     <div class="panel">

@@ -1,7 +1,6 @@
-CREATE DATABASE vino
-    DEFAULT CHARACTER SET utf8;
 
-USE vino;
+    
+
 
 CREATE TABLE tabla_banner (
 	id INT NOT NULL UNIQUE AUTO_INCREMENT,
