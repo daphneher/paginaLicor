@@ -3,10 +3,11 @@
     <?php
     $paginacion = 1;
     $contador_col = 0;
-
-    $query = "SELECT * FROM tabla_productos ORDER BY prioridadp ASC";
+    $img_actual = 0;
+    $query = "SELECT * FROM tabla_productos ORDER BY prioridad ASC";
     $resultado = $conexion->query($query);
     while($row = $resultado->fetch_assoc()){
+        $img_actual++;
         if ($contador_col == 4) {
             $contador_col = 0;
             $paginacion++;
@@ -29,7 +30,9 @@
                      id="img_blog" class="img-responsive img-thumbnail img_blog_zoom hover-shadow cursor" onclick="openModal();currentSlide(<?php echo $img_actual; ?>)">
                 </center>
                 
-                <?php include "variedades/text_descripcion.inc.php"; ?>
+                <?php 
+                include "variedades/js_variedades.inc.php";
+                include "variedades/text_descripcion.inc.php"; ?>
                 <br>
                 <center id="precio_variedad">
                     <h2><?php echo $row['precio']?></h2>
