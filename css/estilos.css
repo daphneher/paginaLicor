@@ -15,7 +15,7 @@ p {
 }
 
 p, h1, h2, h3 {
-  font-family:"Times New Roman",Times,serif;
+  font-family: quiche-sans, sans-serif;
 }
 
 #smart a{
@@ -128,15 +128,16 @@ p, h1, h2, h3 {
 /*++++++++++++++++++++++++ Botón Menú ++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .btnMenu {
+  font-family: quiche-sans, sans-serif;
   font-size: 30px;
   cursor: pointer;
   position: fixed;
-  top: 1.4em;
+  top: 3em;
   background-color: #10101085;
   padding-left: 0.4em;
-  padding-right: 2em;
+  padding-right: 0.4em;
   padding-top:0.2em;
-  color: #efb810c7;
+  color: #ffffff;
   left: 0.1em;
 }
 
@@ -171,10 +172,11 @@ p, h1, h2, h3 {
 }
 
 .overlay a {
+  font-family: quiche-sans, sans-serif;
   padding: 4px;
   text-decoration: none;
   font-size: 36px;
-  color: #efb810c7;
+  color: #ffffff;
   display: block;
   transition: 0.3s;
 }
@@ -212,7 +214,7 @@ p, h1, h2, h3 {
   padding-right: 0.4em;
   top: 0em;
   padding-top:0.2em;
-  color: #efb810c7;
+  color: #ffffff;
   left: 0.1em;
 
 }
@@ -595,7 +597,7 @@ input[type=text]:focus, input[type=password]:focus {
 /*+++++++++++++++++++++++++ Variedad +++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .text_descripcion {
-  font-family: EB Garamond; 
+  font-family: quiche-sans, sans-serif;
   font-weight: normal;
   font-style: italic;
   font-variant: normal;
@@ -636,7 +638,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 
 #descripcion-texto p, #descripcion-texto h1 {
-  font-family:didot,serif,helvética;
+  font-family: quiche-sans, sans-serif;
   
 }
 @media only screen and (max-width: 767px) {
@@ -882,7 +884,7 @@ img.hover-shadow {
   padding-top:1em;
   padding-left:0.5em;
   padding-right:0.5em;
-  font-family: Open Sans;
+  font-family: quiche-sans, sans-serif;
   text-align: left;
 }
 
@@ -893,7 +895,7 @@ img.hover-shadow {
 #publicaciones a .titulo-post{
   color: #6e6e6e;
   font-size: 22px;
-  font-family: 'calibri-light';
+  font-family: quiche-sans, sans-serif;
   text-align: justify;
 }
 
@@ -912,7 +914,7 @@ img.hover-shadow {
 }
 
 #publicaciones .datos-publicaciones{
-  font-family: 'calibri-light';
+  font-family: quiche-sans, sans-serif;
   color: #970601;
 }
 
@@ -976,7 +978,7 @@ form{
 .encabezado-sidebar{
   text-align: center;
   color: #fff;
-  font-family: 'calibri-light';
+  font-family: quiche-sans, sans-serif;
   border-radius: 0.2em;
   padding: 0.18em;
   margin: auto;
@@ -1184,7 +1186,7 @@ form{
 }
 
 #nosotros h2, #nosotros p {
-  font-family:"Times New Roman",Times,serif;
+  font-family: quiche-sans, sans-serif;
   overflow: auto;
 }
 
@@ -1249,12 +1251,20 @@ form{
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #encabezado {
-  background-color:#000000;
+  background-color:#ffffff;
 }
 
 #iconoe {
-  color:#ffffff;
+  color:#000000;
   margin: 5px;
+  float: right;
+
+}
+
+#logo_barra{
+  height: 5em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
 }
 
 #correo {
