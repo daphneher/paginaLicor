@@ -39,7 +39,7 @@ include_once "plantillas/encabezado.inc.php";
 
     <div class="row">
         <div class="col-md-4">
-            <h2 id="titulo-nuestros-vinos">Nuestros Vinos</h2>
+            <h2 id="titulo-nuestros-vinos">Tienda</h2>
             <img class="img-responsive" id="sep-nuestros-vinos" src="<?php echo RUTA_IMG ?>separador.jpg">
         </div>
     </div>
@@ -158,26 +158,22 @@ include_once "plantillas/encabezado.inc.php";
 </div>
 <!-- FIN DE BLOG -->
 <!-- Redes Sociales -->
+<div id="pie-de-pagina">
 <?php
+
 include_once "plantillas/documento-redes-sociales.inc.php";
 ?>
 <!-- Fin Redes Sociales -->
-
+</div>
 <!-- Botón Menú -->
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
         <a href="#">Inicio</a>
+        <a href="#nuestros-vinos"> Tienda  </a>
         <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Nuestros Vinos  </a>
-            <ul id="submenu" class="dropdown-menu">
-                <li><a id="btnSubmenu" class="dropdown-item" href="<?php echo VARIEDAD."?vino=tinto"; ?>" > Vino Tinto </a></li>
-                <li><a id="btnSubmenu" class="dropdown-item" href="<?php echo VARIEDAD."?vino=blanco"; ?>" > Vino Blanco </a></li>
-                <li><a id="btnSubmenu" class="dropdown-item" href="<?php echo VARIEDAD."?vino=rosa"; ?>" > Vino Rosa </a></li>
-                <li><a id="btnSubmenu" class="dropdown-item" href="#" > Otros Productos </a></li>
-          </ul>
         <a href="#blog">Blog</a>
+        <a href="#pie-de-pagina">Redes sociales</a>
     </div>
 </div>
 <div id="menu" >
