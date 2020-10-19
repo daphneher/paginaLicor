@@ -61,20 +61,81 @@ include_once "plantillas/encabezado.inc.php";
             <img src="<?php echo RUTA_IMG ?>copas-de-vinos.jpg" id="copas" class="img-thumbnail" style="width:100%;">
         </div>
     </div>
+    <div class="row">
+        <div id="filtro" >
+            <h5 id="tit-filtro">FILTRAR POR TIPO</h5>
+            <select id="ctg" name="categoria">
+                <option value="" selected="selected">Filtrar por tipo</option>
+                <option value="Tinto">Vino tinto</option>
+                <option value="Blanco">Vino blanco</option>
+                <option value="Rosado">Vino rosado</option>
+                <option value="Espumoso">Espumoso</option>
+            </select>
+        </div>
+        <div  id="filtro" >
+            <h5 id="tit-filtro">FILTRAR POR CEPA</h5>
+            <select id="cep" name="cepa">
+
+                <option value="" selected="selected">Filtrar por cepa</option>
+                <option value="CabernetS">Cabernet Sauvignon</option>
+                <option value="Malbec">Malbec</option>
+                <option value="Merlot">Vino rosado</option>
+                <option value="Syrah">Syrah</option>
+                <option value="PinotN">Pinot Noir</option>
+                <option value="Sangiovese">Sangiovese</option>
+                <option value="Bonarda">Bonarda</option>
+                <option value="Tempranillo">Tempranillo</option>
+                <option value="SauvignonB">Sauvignon Blanc</option>
+                <option value="Semillon">Semillón</option>
+                <option value="Chardonnay">Chardonnay</option>
+                <option value="Torrontes">Torrontés</option>
+                <option value="Chenin">Chenin</option>
+                <option value="Riesling">Riesling</option>
+                <option value="Viognier">Viognier</option>
+
+            </select>
+        </div>
+        <div id="filtro" >
+            <h5 id="tit-filtro">FILTRAR POR PAÍS</h5>
+            <select id="pai" name="pais">
+                <option value="" selected="selected">filtrar por país</option>
+                <option value="Austria">Austria</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Espania">España</option>
+                <option value="EstadosU">Estados Unidos</option>
+                <option value="Francia">Francia</option>
+                <option value="Italia">Italia</option>
+                <option value="NuevaZ">Nueva Zelanda</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Uruguay">Uruguay</option>
+            </select>
+        </div>
+    </div>
+
+    <br> 
+    <?php
+    include_once "plantillas/home-tienda.inc.php";
+    ?>
     <br>
-</div>   
-<!-- Fin Nuestros Vinos -->
 
 
-<!-- TIENDA PRODUCTO -->
-<div class="container-fluid">
-    <div class="slideshow-container hide-mobileP">        
-        <center>
-            <div style="width:95%">
-                <?php
-                include_once "plantillas/home-tienda.inc.php";
-                ?>          
-            </div> 
+    <button class="accordion">Vino Tinto</button>
+    <div class="panel">
+        <br>
+        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <center style="margin: 2em">
+            <a type="button" class="btn btn-default" href="<?php echo VARIEDAD."?vino=tinto"; ?>" >Ver Tinto</a>       
+        </center>
+        
+    </div>
+
+    <button class="accordion">Vino Blanco</button>
+    <div class="panel">
+        <br>
+        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <center style="margin: 2em">
+            <a type="button" class="btn btn-default" href="<?php echo VARIEDAD."?vino=blanco"; ?>" >Ver Blanco</a>
         </center>
 
         <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProducto(1)"></i>
