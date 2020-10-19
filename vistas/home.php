@@ -61,89 +61,67 @@ include_once "plantillas/encabezado.inc.php";
             <img src="<?php echo RUTA_IMG ?>copas-de-vinos.jpg" id="copas" class="img-thumbnail" style="width:100%;">
         </div>
     </div>
-
-    <br> 
-    <?php
-    include_once "plantillas/home-tienda.inc.php";
-    ?>
-    <br>
-
-
-    <button class="accordion">Vino Tinto</button>
-    <div class="panel">
-        <br>
-        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <center style="margin: 2em">
-            <a type="button" class="btn btn-default" href="<?php echo VARIEDAD."?vino=tinto"; ?>" >Ver Tinto</a>       
-        </center>
-        
-    </div>
-
-    <button class="accordion">Vino Blanco</button>
-    <div class="panel">
-        <br>
-        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <center style="margin: 2em">
-            <a type="button" class="btn btn-default" href="<?php echo VARIEDAD."?vino=blanco"; ?>" >Ver Blanco</a>
-        </center>
-        
-    </div>
-
-    <button class="accordion">Vino Rosado</button>
-    <div class="panel">
-        <br>
-        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <center style="margin: 2em">
-            <a type="button" class="btn btn-default" href="<?php echo VARIEDAD."?vino=rosa"; ?>" >Ver Rosa</a>
-        </center>
-        
-    </div>
-
-    <button class="accordion">Otros Productos</button>
-    <div class="panel">
-        <br>
-        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <center style="margin: 2em">
-            <a type="button" class="btn btn-default" href="#" >Ver Otros Productos</a>
-        </center>        
-    </div>
     <br>
 </div>   
 <!-- Fin Nuestros Vinos -->
 
+
+<!-- TIENDA PRODUCTO -->
+<div class="container-fluid">
+    <div class="slideshow-container hide-mobileP">        
+        <center>
+            <div style="width:95%">
+                <?php
+                include_once "plantillas/home-tienda.inc.php";
+                ?>          
+            </div> 
+        </center>
+
+        <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProducto(1)"></i>
+        <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProducto(-1)"></i>                 
+    </div>      
+
+    <div class="slideshow-container show-mobileP">        
+        <center>
+        <?php
+        include_once "plantillas/home-tienda-celular.inc.php";
+        ?>  
+        </center> 
+        <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProductoCelular(1)"></i>
+        <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProductoCelular(-1)"></i>                 
+    </div>     
+</div>
+<!-- Fin TIENDA PRODUCTO -->
+<br><br>
 <!-- Nosotros -->
 <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.9)),url('img/fondo-nosotros.jpg');">
-    <div id="nosotros" class=" parallax">
-                <div id="titulo-nosotros" style="overflow: auto;">
-                    <h2 style="margin-bottom: 0em; text-align: center;">Nosotros</h2>
-                    <img class="img-responsive" src="<?php echo RUTA_IMG; ?>separador.png">
-                </div>
-                <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-           
+    <div id="nosotros" class="parallax">
+        <div id="titulo-nosotros" style="overflow: auto;">
+            <h2 style="margin-bottom: 0em; text-align: center;">Nosotros</h2>
+            <img class="img-responsive" src="<?php echo RUTA_IMG; ?>separador.png">
+        </div>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>  
 </div>
 <!-- Fin Nosotros -->
-
-
 
 
 <!-- BLOG -->
@@ -157,14 +135,17 @@ include_once "plantillas/encabezado.inc.php";
     ?>
 </div>
 <!-- FIN DE BLOG -->
+
+
 <!-- Redes Sociales -->
 <div id="pie-de-pagina">
 <?php
-
 include_once "plantillas/documento-redes-sociales.inc.php";
 ?>
-<!-- Fin Redes Sociales -->
 </div>
+<!-- Fin Redes Sociales -->
+
+
 <!-- Botón Menú -->
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

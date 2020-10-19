@@ -397,7 +397,7 @@ p, h1, h2, h3 {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   border:0;
-  margin:0.2em
+  margin:0.2em;
 }
 
 #titulo-nuestros-vinos {
@@ -412,6 +412,82 @@ p, h1, h2, h3 {
 
 #texto-nuestros-vinos {
   font-size:1.3em;
+}
+
+.paginacion_productos .col-md-2 {
+  width: 20%;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #ccc;
+  height: 30em;
+}
+
+.paginacion_productos .col-md-2 img {
+  height: 15em;
+  margin-top: 6em;
+}
+
+.paginacion_productos .col-md-2 #nombreProductos {
+  position: absolute;
+  width: 80%;
+}
+
+.paginacion_productos-celular .col-md-6 {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #ccc;
+  padding: 1em;
+}
+
+.paginacion_productos-celular .col-md-6 img {
+  height:15em;
+}
+
+@media only screen and (max-width: 768px) {
+  .show-mobileP {
+    display: block;
+  }
+  .hide-mobileP {
+    display: none;
+  }
+
+  .prevP:hover, .nextP:hover {
+    background-color: rgb(255 255 255 / 0%) !important;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .show-mobileP {
+    display: none;
+  }
+  .hide-mobileP {
+    display: block;
+  }
+}
+ 
+.nextP, .prevP {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.nextP {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prevP:hover, .nextP:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
 @media screen and (max-width: 450px) {
@@ -1016,11 +1092,10 @@ form{
   }
   .hide-mobile {
     display: block;
-    width: 100% !important;
   }
 }
 
-+@media only screen and (max-width:991px) {
+@media only screen and (max-width:991px) {
   #publicaciones {
     width: 100%;
   }
@@ -1180,13 +1255,13 @@ form{
   margin-right: 1em;
   margin-left: 1em;
 
-    position: relative;
-    display: inline-block;
-    text-align: center;
+  position: relative;
+  display: inline-block;
+  text-align: center;
 }
 
 #nosotros h2, #nosotros p {
-  font-family: quiche-sans, sans-serif;
+  font-family:"Times New Roman",Times,serif;
   overflow: auto;
 }
 
@@ -1211,7 +1286,6 @@ form{
 #titulo-nosotros img {
   margin: auto;
 }
-
 
 #texto-encima {
   position: absolute;

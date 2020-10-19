@@ -1,3 +1,59 @@
+<!-- Productos -->
+<script>
+    var productoIndex = 1;
+    var Ptimer = null;
+    showProductos(productoIndex);
+
+    function plusProducto(n) {
+      clearTimeout(Ptimer);
+      showProductos(productoIndex += n);
+    }
+
+    function showProductos(n) {
+      clearTimeout(Ptimer);
+      var i;
+      var producto = document.getElementsByClassName("paginacion_productos");
+      
+      if (n==undefined){n = ++productoIndex}
+      if (n > producto.length) {productoIndex = 1}
+      if (n < 1) {productoIndex = producto.length}
+      
+      for (i = 0; i < producto.length; i++) {
+          producto[i].style.display = "none";
+      }
+      
+      producto[productoIndex-1].style.display = "block";
+      //Ptimer = setTimeout(showProductos, 10000);
+    } 
+</script>
+
+<script>
+    var productoCelularIndex = 1;
+    var PCtimer = null;
+    showProductosCelular(productoCelularIndex);
+
+    function plusProductoCelular(n) {
+      clearTimeout(PCtimer);
+      showProductosCelular(productoCelularIndex += n);
+    }
+
+    function showProductosCelular(n) {
+      clearTimeout(PCtimer);
+      var i;
+      var productoCelular = document.getElementsByClassName("paginacion_productos-celular");
+      
+      if (n==undefined){n = ++productoCelularIndex}
+      if (n > productoCelular.length) {productoCelularIndex = 1}
+      if (n < 1) {productoCelularIndex = productoCelular.length}
+      
+      for (i = 0; i < productoCelular.length; i++) {
+          productoCelular[i].style.display = "none";
+      }
+      
+      productoCelular[productoCelularIndex-1].style.display = "block";
+    } 
+</script>
+<!-- Fin Productos -->
 
 <!-- Banner -->
 <script>
