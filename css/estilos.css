@@ -132,7 +132,7 @@ p, h1, h2, h3, h5 {
   font-size: 30px;
   cursor: pointer;
   position: fixed;
-  top: 12em;
+  top: 3em;
   background-color: #10101085;
   padding-left: 0.4em;
   padding-right: 0.4em;
@@ -222,7 +222,7 @@ p, h1, h2, h3, h5 {
 @media only screen and (max-width: 450px) {
   .btnMenu {
     font-size: 20px;
-    top: 50%;
+    top: 19%;
   }
   .sticky {
     font-size: 20px;

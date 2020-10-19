@@ -61,6 +61,13 @@ include_once "plantillas/encabezado.inc.php";
             <img src="<?php echo RUTA_IMG ?>copas-de-vinos.jpg" id="copas" class="img-thumbnail" style="width:100%;">
         </div>
     </div>
+</div>   
+<!-- Fin Nuestros Vinos -->
+
+
+<!-- TIENDA PRODUCTO -->
+<div class="container-fluid">
+
     <div class="row">
         <div id="filtro" >
             <h5 id="tit-filtro">FILTRAR POR TIPO</h5>
@@ -113,29 +120,13 @@ include_once "plantillas/encabezado.inc.php";
         </div>
     </div>
 
-    <br> 
-    <?php
-    include_once "plantillas/home-tienda.inc.php";
-    ?>
-    <br>
-
-
-    <button class="accordion">Vino Tinto</button>
-    <div class="panel">
-        <br>
-        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <center style="margin: 2em">
-            <a type="button" class="btn btn-default" href="<?php echo VARIEDAD."?vino=tinto"; ?>" >Ver Tinto</a>       
-        </center>
-        
-    </div>
-
-    <button class="accordion">Vino Blanco</button>
-    <div class="panel">
-        <br>
-        <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <center style="margin: 2em">
-            <a type="button" class="btn btn-default" href="<?php echo VARIEDAD."?vino=blanco"; ?>" >Ver Blanco</a>
+    <div class="slideshow-container hide-mobileP">        
+        <center>
+            <div style="width:95%">
+                <?php
+                include_once "plantillas/home-tienda.inc.php";
+                ?>          
+            </div> 
         </center>
 
         <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProducto(1)"></i>

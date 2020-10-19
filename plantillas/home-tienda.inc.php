@@ -1,6 +1,6 @@
 <?php
 $elementos = 0;
-$query = "SELECT * FROM tabla_productos ORDER BY prioridad ASC LIMIT 20";
+$query = "SELECT * FROM tabla_productos ORDER BY prioridad ASC";
 $resultado = $conexion->query($query);
 while($row = $resultado->fetch_assoc()){
     
