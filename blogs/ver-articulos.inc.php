@@ -9,7 +9,7 @@
     OR categoria LIKE '$buscador' 
     OR presentacion LIKE '$buscador' 
     OR autor LIKE '$buscador'
-    ORDER BY fecha DESC LIMIT 10";
+    ORDER BY fecha DESC";
 
     $query = "SELECT * FROM `tabla_blog` WHERE ".$buscar_en;
 
@@ -107,20 +107,7 @@
   </article>
   <?php
   } 
-  else {
-  ?>
-    <!-- REVISAR - PAGINACION SIN NINGUN FUNCIONAMIENTO -->
-    <div id="paginacion">
-      <p>Anteriores publicaciones
-        <a href="#" class="enlace-paginacion">
-          Siguientes publicaciones
-        </a>
-      </p>
-    </div>
-  <?php
-  }
   ?> 
-
 </section>
 
 

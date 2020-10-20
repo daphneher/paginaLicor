@@ -62,65 +62,37 @@ include_once "plantillas/encabezado.inc.php";
         </div>
     </div>
 </div>   
-<!-- Fin Nuestros Vinos -->
-
 
 <!-- TIENDA PRODUCTO -->
 <div class="container-fluid">
+    <!-- FILTRO PRODUCTO -->
+    <center>
+        <?php
+        include_once "plantillas/filtro_productos.inc.php";
+        ?>    
+    </center>
+    <br>
+    <!-- FIN FILTRO PRODUCTO -->
 
-    <div class="row">
-        <div id="filtro" >
-            <h5 id="tit-filtro">FILTRAR POR TIPO</h5>
-            <select id="ctg" name="categoria">
-                <option value="" selected="selected">Filtrar por tipo</option>
-                <option value="Tinto">Vino tinto</option>
-                <option value="Blanco">Vino blanco</option>
-                <option value="Rosado">Vino rosado</option>
-                <option value="Espumoso">Espumoso</option>
-            </select>
-        </div>
-        <div  id="filtro" >
-            <h5 id="tit-filtro">FILTRAR POR CEPA</h5>
-            <select id="cep" name="cepa">
+    <div class="slideshow-container show-mobileP" id="tiendaProducto">        
+        <center>
+        <?php
+        include_once "plantillas/home-tienda-celular.inc.php";
+        ?>  
+        </center> 
+        <?php
+        if ($hayProductos) {
+        ?>
+        <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProductoCelular(1)"></i>
+        <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProductoCelular(-1)"></i> 
+        <?php
+        } else {
+            echo "<h3>No hay resultados.</h3";
+        }
+        ?>      
+    </div>  
 
-                <option value="" selected="selected">Filtrar por cepa</option>
-                <option value="CabernetS">Cabernet Sauvignon</option>
-                <option value="Malbec">Malbec</option>
-                <option value="Merlot">Vino rosado</option>
-                <option value="Syrah">Syrah</option>
-                <option value="PinotN">Pinot Noir</option>
-                <option value="Sangiovese">Sangiovese</option>
-                <option value="Bonarda">Bonarda</option>
-                <option value="Tempranillo">Tempranillo</option>
-                <option value="SauvignonB">Sauvignon Blanc</option>
-                <option value="Semillon">Semillón</option>
-                <option value="Chardonnay">Chardonnay</option>
-                <option value="Torrontes">Torrontés</option>
-                <option value="Chenin">Chenin</option>
-                <option value="Riesling">Riesling</option>
-                <option value="Viognier">Viognier</option>
-
-            </select>
-        </div>
-        <div id="filtro" >
-            <h5 id="tit-filtro">FILTRAR POR PAÍS</h5>
-            <select id="pai" name="pais">
-                <option value="" selected="selected">filtrar por país</option>
-                <option value="Austria">Austria</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Chile">Chile</option>
-                <option value="Espania">España</option>
-                <option value="EstadosU">Estados Unidos</option>
-                <option value="Francia">Francia</option>
-                <option value="Italia">Italia</option>
-                <option value="NuevaZ">Nueva Zelanda</option>
-                <option value="Portugal">Portugal</option>
-                <option value="Uruguay">Uruguay</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="slideshow-container hide-mobileP">        
+    <div class="slideshow-container hide-mobileP" id="tiendaProducto">        
         <center>
             <div style="width:95%">
                 <?php
@@ -128,23 +100,22 @@ include_once "plantillas/encabezado.inc.php";
                 ?>          
             </div> 
         </center>
-
-        <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProducto(1)"></i>
-        <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProducto(-1)"></i>                 
-    </div>      
-
-    <div class="slideshow-container show-mobileP">        
-        <center>
         <?php
-        include_once "plantillas/home-tienda-celular.inc.php";
-        ?>  
-        </center> 
-        <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProductoCelular(1)"></i>
-        <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProductoCelular(-1)"></i>                 
-    </div>     
+        if ($hayProductos) {
+        ?>
+        <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProducto(1)"></i>
+        <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProducto(-1)"></i>  
+        <?php
+        } else {
+            echo "<h3>No hay resultados.</h3";
+        }
+        ?>         
+    </div>      
 </div>
-<!-- Fin TIENDA PRODUCTO -->
+<!-- FIN TIENDA PRODUCTO -->
+
 <br><br>
+
 <!-- Nosotros -->
 <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.9)),url('img/fondo-nosotros.jpg');">
     <div id="nosotros" class="parallax">

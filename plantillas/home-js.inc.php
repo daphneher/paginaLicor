@@ -1,3 +1,6 @@
+<?php
+if ($hayProductos) {
+?>
 <!-- Productos -->
 <script>
     var productoIndex = 1;
@@ -54,6 +57,9 @@
     } 
 </script>
 <!-- Fin Productos -->
+<?php
+}
+?>
 
 <!-- Banner -->
 <script>
