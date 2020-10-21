@@ -45,14 +45,11 @@ $resultado = $conexion->query($query);
 $hayProductos = false;
 $elementos = 0;
 
+echo '<div class="row paginacion_productos-celular">';
+
 while($row = $resultado->fetch_assoc()){
     $hayProductos = true;
     
-    if ($elementos == 0) {
-?>
-    <div class="row paginacion_productos-celular">
-<?php
-    }
     if ($elementos < 2) {
         $elementos++;
 ?>
@@ -67,9 +64,10 @@ while($row = $resultado->fetch_assoc()){
     }
     if ($elementos == 2) {
         $elementos = 0;
-?>
-    </div>
-<?php
+        echo "</div>";
+        echo '<div class="row paginacion_productos-celular">';
     }
 }
+
+echo "</div>";
 ?>

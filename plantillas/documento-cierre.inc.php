@@ -1,6 +1,7 @@
 		 
 		<!-- Botón Wsp -->
-		<a href="https://www.google.com" target="_blank">
+		<a href="https://api.whatsapp.com/send?phone=<?php echo NUMERO_TEL ?>" data-action="share/whatsapp/share" target="_blank">
+
 		    <i class="fa fa-whatsapp"></i>
 		</a> 
 		<!-- Fin Botón Wsp -->

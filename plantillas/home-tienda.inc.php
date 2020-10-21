@@ -40,20 +40,16 @@ else {
     }
     
 }
- 
 $resultado = $conexion->query($query);
 
 $hayProductos = false;
 $elementos = 0;
 
+echo '<div class="row paginacion_productos">';
+
 while($row = $resultado->fetch_assoc()){
     $hayProductos = true;
     
-    if ($elementos == 0) {
-?>
-    <div class="row paginacion_productos">
-<?php
-    }
     if ($elementos < 5) {
         $elementos++;
 ?>
@@ -70,9 +66,10 @@ while($row = $resultado->fetch_assoc()){
     }
     if ($elementos == 5) {
         $elementos = 0;
-?>
-    </div>
-<?php
+        echo "</div>";
+        echo '<div class="row paginacion_productos">';
     }
-}
+} 
+
+echo "</div>";
 ?>

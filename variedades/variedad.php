@@ -1,25 +1,29 @@
 <?php
 include_once "mostrar_errores.inc.php";
 
-$tipo_vino = $_REQUEST['vino'];
-
-$titulo = "Vinos - $tipo_vino";
+$titulo = "Tienda";
 
 include_once "plantillas/documento-apertura.inc.php";
 include_once "plantillas/encabezado.inc.php";
 ?>
 
-<!-- Descripcion del vino -->
-<?php
-include_once "variedades/descripcion-tabla_vino_$tipo_vino.inc.php";
-?>
-<!-- Fin de Descripcion del vino -->
-
-<!-- Visualizacion de Productos -->
-<?php
-include_once "variedades/mostrar_img_vinos.inc.php";
-?>
-<!-- Fin de Visualizacion de Productos -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<!-- FILTRO PRODUCTO -->
+		    <div class="container">
+		        <center>
+		            <?php
+		            include_once "plantillas/filtro_productos.inc.php";
+		            ?>    
+		        </center>
+		    </div>
+		</div>
+		<div class="col-md-8">
+			
+		</div>
+	</div>
+</div>
 
 <!-- Redes Sociales -->
 <?php

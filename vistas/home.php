@@ -35,7 +35,7 @@ include_once "plantillas/encabezado.inc.php";
 
 
 <!-- Nuestros Vinos -->
-<div class="container" id="nuestros-vinos">
+<div class="container-fluid" id="nuestros-vinos">
 
     <div class="row">
         <div class="col-md-4">
@@ -46,34 +46,16 @@ include_once "plantillas/encabezado.inc.php";
 
     <br>
 
-    <div class="row">
-        <div class="col-md-8">
-            <p id="texto-nuestros-vinos">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <center>
-                <a type="button" class="btn btn-default" href="<?php echo FORMULARIO ?>" >Formulario de compra</a>
-            </center>
-        </div>
-        <div class="col-md-4">
-            <img src="<?php echo RUTA_IMG ?>copas-de-vinos.jpg" id="copas" class="img-thumbnail" style="width:100%;">
-        </div>
-    </div>
 </div>   
 
 <!-- TIENDA PRODUCTO -->
 <div class="container-fluid">
     <!-- FILTRO PRODUCTO -->
-    <center>
-        <?php
-        include_once "plantillas/filtro_productos.inc.php";
-        ?>    
-    </center>
+    <div class="container" style="margin-left: 1.5em">
+            <?php
+            include_once "plantillas/filtro_productos.inc.php";
+            ?>    
+    </div>
     <br>
     <!-- FIN FILTRO PRODUCTO -->
 
@@ -86,11 +68,11 @@ include_once "plantillas/encabezado.inc.php";
         <?php
         if ($hayProductos) {
         ?>
-        <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProductoCelular(1)"></i>
-        <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProductoCelular(-1)"></i> 
+            <i class="fa fa-angle-right fa-2x nextP" aria-hidden="true" onclick="plusProductoCelular(1)"></i>
+            <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProductoCelular(-1)"></i> 
         <?php
         } else {
-            echo "<h3>No hay resultados.</h3";
+            echo "<h3>No hay resultados.</h3>";
         }
         ?>      
     </div>  
@@ -110,10 +92,18 @@ include_once "plantillas/encabezado.inc.php";
         <i class="fa fa-angle-left fa-2x prevP" aria-hidden="true" onclick="plusProducto(-1)"></i>  
         <?php
         } else {
-            echo "<h3>No hay resultados.</h3";
+            echo "<h3>No hay resultados.</h3>";
         }
         ?>         
-    </div>      
+    </div>   
+
+    <br><br>
+    <center>
+        <h3>¡¡¡ Pedí tus productos aquí !!!</h3>
+        <a type="button" class="btn btn-default" id="btnFormProduc" href="<?php echo FORMULARIO ?>">
+            Formulario de compra
+        </a>
+    </center>
 </div>
 <!-- FIN TIENDA PRODUCTO -->
 
@@ -122,7 +112,7 @@ include_once "plantillas/encabezado.inc.php";
 <!-- Nosotros -->
 <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.9)),url('img/fondo-nosotros.jpg');">
     <div id="nosotros" class="parallax">
-        <div id="titulo-nosotros" style="overflow: auto;">
+        <div id="titulo-nosotros">
             <h2 style="margin-bottom: 0em; text-align: center;">Nosotros</h2>
             <img class="img-responsive" src="<?php echo RUTA_IMG; ?>separador.png">
         </div>
@@ -148,7 +138,6 @@ include_once "plantillas/encabezado.inc.php";
     </div>  
 </div>
 <!-- Fin Nosotros -->
-
 
 <!-- BLOG -->
 <div class="container-fluid" id="blog" style="background-color:#470f11; color:white;">

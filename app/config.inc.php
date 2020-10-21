@@ -42,5 +42,6 @@ define("TABLA_BLOG", "tabla_blog");
 define("TABLA_PRODUCTOS", "tabla_productos");
 
 // Datos personales
+define("NUMERO_TEL", "5491138197420");
 
-define("NUMERO_TEL", "1987652345");
+
