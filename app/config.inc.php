@@ -10,6 +10,10 @@ define("CERRAR_SESION", SERVIDOR . "/cerrar_sesion");
 // Variedades
 define("VARIEDAD", SERVIDOR . "/variedad");
 
+//Formulario
+define("FORMULARIO", SERVIDOR . "/formulario");
+
+
 // Blogs
 define("BLOG", SERVIDOR . "/blog");
 define("POST", BLOG . "/post");
@@ -36,3 +40,7 @@ define("ADMIN_PROCESO_MODIFICAR", USER . "/admin_proceso_modificar");
 define("TABLA_BANNER", "tabla_banner");
 define("TABLA_BLOG", "tabla_blog");
 define("TABLA_PRODUCTOS", "tabla_productos");
+
+// Datos personales
+
+define("NUMERO_TEL", "1987652345");

@@ -56,6 +56,9 @@ include_once "plantillas/encabezado.inc.php";
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+            <center>
+                <a type="button" class="btn btn-default" href="<?php echo FORMULARIO ?>" >Formulario de compra</a>
+            </center>
         </div>
         <div class="col-md-4">
             <img src="<?php echo RUTA_IMG ?>copas-de-vinos.jpg" id="copas" class="img-thumbnail" style="width:100%;">

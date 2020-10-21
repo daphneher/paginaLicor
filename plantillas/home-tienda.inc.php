@@ -3,9 +3,9 @@ if (empty($categoria) && empty($cepa) && empty($pais)) {
     if (empty($precio)) {
         $query = "SELECT * FROM tabla_productos ORDER BY prioridad ASC";
     } elseif ($precio == "Mayor Precio") {
-        $query = "SELECT * FROM tabla_productos ORDER BY precio DESC";
+        $query = "SELECT * FROM tabla_productos ORDER BY CAST(precio AS int) DESC";
     } else {
-        $query = "SELECT * FROM tabla_productos ORDER BY precio ASC";
+        $query = "SELECT * FROM tabla_productos ORDER BY CAST(precio AS int) ASC";
     }    
 } 
 
@@ -34,9 +34,9 @@ else {
     if (empty($precio)) {
         $query = "SELECT * FROM tabla_productos WHERE ".$buscar_en." ORDER BY prioridad ASC";
     } elseif ($precio == "Mayor precio") {
-        $query = "SELECT * FROM tabla_productos WHERE ".$buscar_en." ORDER BY precio DESC";
+        $query = "SELECT * FROM tabla_productos WHERE ".$buscar_en." ORDER BY CAST(precio AS int) DESC";
     } else {
-        $query = "SELECT * FROM tabla_productos WHERE ".$buscar_en." ORDER BY precio ASC";
+        $query = "SELECT * FROM tabla_productos WHERE ".$buscar_en." ORDER BY CAST(precio AS int) ASC";
     }
     
 }
