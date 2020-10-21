@@ -1384,13 +1384,10 @@ form{
   background-color: #0a0a0ab5;
 }
 
-#titulo-nosotros {
-  width: 50%;
-  text-align: left;
-  margin: auto;
-}
+
 #titulo-nosotros img {
-  margin: auto;
+  float: right;
+  padding-left: 27%;
 }
 
 #texto-encima {
@@ -1401,9 +1398,11 @@ form{
 }
 
 @media only screen and (max-width:480px) {
-  #titulo-nosotros { 
-    width: 100%;
+  #titulo-nosotros img{ 
+    padding-left: 0%;
+    padding-top: 20%;
   }
+  
   #nosotros p {
   font-size:1em;
   }
@@ -1426,9 +1425,10 @@ form{
   background-size: cover;
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-width:450px) {
   .parallax {
     background-attachment: scroll;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url("../img/nosotros.png");
   }
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
