@@ -52,9 +52,9 @@ include_once "plantillas/encabezado.inc.php";
 <div class="container-fluid">
     <!-- FILTRO PRODUCTO -->
     <div class="container" style="margin-left: 1.5em">
-            <?php
-            include_once "plantillas/filtro_productos.inc.php";
-            ?>    
+        <?php
+        include_once "plantillas/filtro_productos.inc.php";
+        ?>    
     </div>
     <br>
     <!-- FIN FILTRO PRODUCTO -->
